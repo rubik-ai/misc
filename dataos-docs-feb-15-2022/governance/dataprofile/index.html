@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Data Profiling - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#data-profiling-in-dataos">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Data Profiling
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Profiling
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Data Profiling
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-data-profiling">
+    What is data profiling?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-data-profiling">
+    Why data profiling?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-data-profiling-tool-works">
+    How data profiling tool works?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-profile-data-on-dataos-ui">
+    Getting profile data on DataOS UI
+  </a>
+<nav aria-label="Getting profile data on DataOS UI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+    Summary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#correlation-matrix">
+    Correlation matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabular-profile-data">
+    Tabular profile data
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interpretation-of-profile-data">
+    Interpretation of profile data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-casesexamples">
+    Use cases/examples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performing-data-profiling">
+    Performing data profiling
+  </a>
+<nav aria-label="Performing data profiling" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure-of-profile-job">
+    Basic structure of profile job
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-template-of-profile-job">
+    YAML template of profile job
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-profile-job">
+    Running profile job
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-data-profiling">
+    What is data profiling?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-data-profiling">
+    Why data profiling?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-data-profiling-tool-works">
+    How data profiling tool works?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-profile-data-on-dataos-ui">
+    Getting profile data on DataOS UI
+  </a>
+<nav aria-label="Getting profile data on DataOS UI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+    Summary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#correlation-matrix">
+    Correlation matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabular-profile-data">
+    Tabular profile data
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interpretation-of-profile-data">
+    Interpretation of profile data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-casesexamples">
+    Use cases/examples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performing-data-profiling">
+    Performing data profiling
+  </a>
+<nav aria-label="Performing data profiling" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-structure-of-profile-job">
+    Basic structure of profile job
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-template-of-profile-job">
+    YAML template of profile job
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-profile-job">
+    Running profile job
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="data-profiling-in-dataos">Data profiling in DataOS<a class="headerlink" href="#data-profiling-in-dataos" title="Permanent link">¶</a></h1>
+<h2 id="what-is-data-profiling">What is data profiling?<a class="headerlink" href="#what-is-data-profiling" title="Permanent link">¶</a></h2>
+<p>Data profiling is the process of assessing the quality and structure of the data in the dataset. It examines source data to determine the accuracy, completeness, and validity and summarizes information about that data.</p>
+<h2 id="why-data-profiling">Why data profiling?<a class="headerlink" href="#why-data-profiling" title="Permanent link">¶</a></h2>
+<p>It is crucial to know the <strong>completeness</strong> and correctness of the data to take full advantage of the value and usefulness of the source data available. Inaccurate and incomplete data used for the analysis can lead to incorrect data-driven decisions for any organization.</p>
+<p>Analysis and assessment algorithms incorporated in data profiling tools  will provide insights into what potential issues exist within a dataset.</p>
+<p>You can assess your source data quality before using it in critical business scenarios and verify that data columns in your dataset are populated with the right kind of data. </p>
+<h2 id="how-data-profiling-tool-works">How data profiling tool works?<a class="headerlink" href="#how-data-profiling-tool-works" title="Permanent link">¶</a></h2>
+<p>Data profiling tool analyzes the structure, content, and relationships within data to uncover patterns and rules, inconsistencies, anomalies, and redundancies to achieve higher data quality. It uses basic statistics to know about the validity of the data.  </p>
+<p><strong>Structure discovery:</strong> This validates that your data is consistent and formatted correctly. Structure discovery examines the patterns in the data. For example, pattern matching helps you find the valid formats within the data set if your data contains phone numbers. It also uses basic statistics like the minimum and maximum values, means, medians, modes, and standard deviations to gain insight into the validity of the data.</p>
+<p><strong>Content discovery:</strong> This looks more closely into the individual elements of the dataset to check data quality. It can help you find entries in your dataset that contain null values or values that are incorrect or ambiguous. 
+For example, if there are phone numbers with no area code.</p>
+<p><strong>Relationship discovery:</strong> This discovers how the data columns are interrelated/interdependent/associated. </p>
+<h2 id="getting-profile-data-on-dataos-ui">Getting profile data on DataOS UI<a class="headerlink" href="#getting-profile-data-on-dataos-ui" title="Permanent link">¶</a></h2>
+<ol>
+<li>Sign in to your DataOS instance with your username and password. </li>
+<li>On the <strong>DataOS Datanet</strong> page, search for the dataset for which you want to view the profile data. To display the dataset information, click on its name.
+<img alt="Image" src="../images/dataprofile-datanet-search1.png"/></li>
+<li>On the <strong>Dataset information</strong> page, click on <strong>Profile</strong>. 
+<img alt="Image" src="../images/dataprofile-dataset1.png"/></li>
+<li>You will get the following profile data and chart:<ul>
+<li><a href="#Summary">Summary</a></li>
+<li><a href="#Correlation">Correlation matrix</a></li>
+<li><a href="#Tabular">Tabular profile data</a>
+<img alt="Image" src="../images/dataprofile-dataset-profile1.png"/></li>
+</ul>
+</li>
+</ol>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
+<p>DataOS enables you to have an overview of the data in the profile report.
+The following information is generated as a summary:</p>
+<ol>
+<li><strong>Job run details</strong> such as job name, who run the job, date &amp; time </li>
+<li><strong>Sample selection filter</strong>- click on the link to see the applied filter (if any) to get the sample data for profiling</li>
+<li><strong>Query</strong>- click on the link to see the generated query </li>
+<li><strong>Number of rows analyzed</strong></li>
+<li><strong>Number of columns analyzed</strong></li>
+<li><strong>Number of columns with type mismatches</strong></li>
+<li><strong>Number of columns with complete data and names of those columns</strong></li>
+<li><strong>Number of columns with incomplete data and names of those columns</strong></li>
+</ol>
+<h3 id="correlation-matrix">Correlation matrix<a class="headerlink" href="#correlation-matrix" title="Permanent link">¶</a></h3>
+<p>Data profiling generates a correlation matrix,  a table showing correlation  between data elements(essentially having numerical values)using color gradients. It helps in quick visual analysis.
+You can explore the association between two variables and makes inferences about the strength of the relationship. You can discover uncommon associations using this matrix that can help you going ahead with further exploration of data.</p>
+<h3 id="tabular-profile-data">Tabular profile data<a class="headerlink" href="#tabular-profile-data" title="Permanent link">¶</a></h3>
+<p>DataOS also allows you to have more detailed view and to drill down the data in the profile report. You will get the following information in the tabular form.</p>
+<ul>
+<li><strong>General</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Column</td>
+<td>Data type of the column, length of the data in the column//check</td>
+</tr>
+<tr>
+<td>Unique(% / value)</td>
+<td>Uniqueness Percentage/ Unique count</td>
+</tr>
+<tr>
+<td>Distinct</td>
+<td>Number of distinct patterns observed</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Number and percentage of records with a null value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Statistics</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Statistical Measures</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min</td>
+<td>The smallest mathematical value in the data set</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>The largest mathematical value in the data set</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>Average value of a distribution</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>The most frequent value</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>Middle value in a sorted set</td>
+</tr>
+<tr>
+<td>Standard Deviation</td>
+<td>How much the members of a group differ from the mean value for the group. This is very useful in finding an outliers histogram. Outliers are the abnormal distance from the group, the occurrence of these numbers are uncommon</td>
+</tr>
+<tr>
+<td>Skewness</td>
+<td>Measure of symmetry, or more precisely, the lack of symmetry. A data set is symmetric if it looks same to the left and right of the centre point (mean)</td>
+</tr>
+<tr>
+<td>Coefficient of variation</td>
+<td>The coefficient of variation shows the extent of variability of data in a sample in relation to the mean of the population</td>
+</tr>
+<tr>
+<td>First quartile</td>
+<td>The lower quartile, or first quartile, is denoted as Q1 and is the middle number that falls between the smallest value of the dataset and the median</td>
+</tr>
+<tr>
+<td>Second quartile</td>
+<td>The second quartile (Q2) is the median of a data set; thus 50% of the data lies below this point</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Image" src="../images/dataprofile-dataset-profile-tabulardata.png"/></p>
+<h3 id="interpretation-of-profile-data">Interpretation of profile data<a class="headerlink" href="#interpretation-of-profile-data" title="Permanent link">¶</a></h3>
+<p>The output from any data profiling job needs to be interpreted before it is useful. </p>
+<h2 id="use-casesexamples">Use cases/examples<a class="headerlink" href="#use-casesexamples" title="Permanent link">¶</a></h2>
+<h2 id="performing-data-profiling">Performing data profiling<a class="headerlink" href="#performing-data-profiling" title="Permanent link">¶</a></h2>
+<p>Data profiling can be  done on the entire dataset or a sample /filtered data. You can filter the data by applying appropriate rules. Data profiling is a quite computationally intensive in terms of resources so it is recommended to run it for a sample data in a dataset. </p>
+<h3 id="basic-structure-of-profile-job">Basic structure of profile job<a class="headerlink" href="#basic-structure-of-profile-job" title="Permanent link">¶</a></h3>
+<p>Define a YAML file for your prfiling job. </p>
+<p>To learn more about defining a YAML file, refer to <a href="../../flare/">Flare</a> section.</p>
+<p>There are some <strong>additional properties</strong> that you need to define specifically for profiling job.</p>
+<ol>
+<li><strong>Persistent Volume:</strong> This is mandatory to define the volume to store intermediate files generated in the process of profiling. The directory given here is  predefined.
+<div class="highlight"><pre><span></span><code><span class="nt">persistentVolume</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">persistent-v</span>
+    <span class="nt">directory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fides</span>
+</code></pre></div></li>
+<li><strong>Filters:</strong> You may define  the fiter criterion to reduce the data on which you want to perform profiling. if removed, profiling will be performed on the entire dataset. The filter criterion is like a <em>where</em> clause of your SQL query. 
+<div class="highlight"><pre><span></span><code><span class="nt">profile</span><span class="p">:</span>
+    <span class="c1"># basic | intermediate | advanced</span>
+    <span class="nt">level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">basic</span>
+    <span class="nt">filters</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">expression</span>
+          <span class="nt">expression</span><span class="p">:</span> <span class="s">"gender='MALE'"</span>
+</code></pre></div></li>
+<li><strong>Input:</strong> Dataset, on which we are perofmring profiling, should be first in the input list.
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">profile_input_df</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://set01:default/orders_enriched_01?acl=r</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hudi</span>
+</code></pre></div><blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: One profile job can have only one dataset.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="yaml-template-of-profile-job">YAML template of profile job<a class="headerlink" href="#yaml-template-of-profile-job" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">prf-s-odr-er-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Fides</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Offline Sales</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">has_profile</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Enriched Order Profiler</span>
+  <span class="nt">dag</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">p-s-odr-er-01</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Order Enriched Data Profiler</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job performs profiling on order enriched data</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+      <span class="nt">tier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">system</span>
+      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Order Enriched Data Profiler</span>
+      <span class="nt">persistentVolume</span><span class="p">:</span>                                             <span class="c1"># define volume</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">persistent-v</span>
+        <span class="nt">directory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fides</span>
+      <span class="nt">flare</span><span class="p">:</span>
+        <span class="nt">job</span><span class="p">:</span>
+          <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">inputs</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">profile_input_df</span>
+              <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:set01/orders_enriched_01?acl=r</span>    <span class="c1"># dataset name</span>
+              <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iceberg</span>
+          <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">WARN</span>
+          <span class="nt">profile</span><span class="p">:</span>                                                  <span class="c1"># basic | intermediate | advanced</span>
+            <span class="nt">level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">basic</span>
+            <span class="nt">filters</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">expression</span>
+                <span class="nt">expression</span><span class="p">:</span> <span class="s">"gender='MALE'"</span>                         <span class="c1"># Filter expression</span>
+</code></pre></div>
+<h3 id="running-profile-job">Running profile job<a class="headerlink" href="#running-profile-job" title="Permanent link">¶</a></h3>
+<p>You can run the job for profiling on demand. Follow the steps to <a href="../../cli/tutorials/">submit the workflow to run Flare job on DataOS CLI</a>.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../datagovernance/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Introduction
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../fingerprinting/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Data Fingerprinting
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

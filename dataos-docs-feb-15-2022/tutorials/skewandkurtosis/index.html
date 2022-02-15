@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Skew and Kurtosis - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#skewness">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Skew and Kurtosis
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Skew and Kurtosis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Skew and Kurtosis
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skewness">
+    Skewness
+  </a>
+<nav aria-label="Skewness" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#measure-and-interpretation">
+    Measure and Interpretation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kurtosis">
+    Kurtosis
+  </a>
+<nav aria-label="Kurtosis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excess-kurtosis">
+    Excess Kurtosis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-kurtosis">
+    Types of Kurtosis
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skewness">
+    Skewness
+  </a>
+<nav aria-label="Skewness" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#measure-and-interpretation">
+    Measure and Interpretation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kurtosis">
+    Kurtosis
+  </a>
+<nav aria-label="Kurtosis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excess-kurtosis">
+    Excess Kurtosis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-kurtosis">
+    Types of Kurtosis
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>Skew and Kurtosis</h1>
+<h2 id="skewness">Skewness<a class="headerlink" href="#skewness" title="Permanent link">¶</a></h2>
+<p>Skewness is the degree of distortion or asymmetry from normal distribution or a symmetrical bell curve. A symmetrical distribution has a skewness of 0.</p>
+<p>There are two types of skew:</p>
+<ul>
+<li>
+<p>Positive: When the right side tail is longer and thicker than the left, the skewness is said to be positive. The mean is highest followed by median and then mode.</p>
+</li>
+<li>
+<p>Negative: When the left side tail is longer and thicker than the right, the skewness is said to be negative. The mode is highest followed by median and then mean.</p>
+</li>
+</ul>
+<p><img alt="Image" src="../images/tutorials-skew.png">
+Pic credits: codeburst.io</img></p>
+<h3 id="measure-and-interpretation">Measure and Interpretation<a class="headerlink" href="#measure-and-interpretation" title="Permanent link">¶</a></h3>
+<ul>
+<li>Skewness value between -0.5 and 0.5 indicates that the data is approximately symmetrical.</li>
+<li>Skewness value between  -1 and -0.5 (negatively skewed) or between 0.5 and 1 (positively skewed) indicates that the data is <strong>moderately skewed</strong>.</li>
+<li>Skewness value less than -1 (negatively skewed) or greater than 1   (positively skewed) indicates that the data is <strong>highly skewed</strong>.</li>
+</ul>
+<p>Example: </p>
+<p>Lets say a shop has products costing from $100 to $1000, averaging about $500.</p>
+<p>If majority of the products cost less than $500, there is positive skewness and if the majority cost more than $500 there is negative skewness. </p>
+<h2 id="kurtosis">Kurtosis<a class="headerlink" href="#kurtosis" title="Permanent link">¶</a></h2>
+<p>It is the measure of outliers or extremes present in the data distribution. High kurtosis means that the data is outlier heavy or the tails are heavy, in which case the data needs to be thoroughly investigated. On the other hand, low kurtosis would mean lack of outliers/ light tails, which also mandates an investigation.</p>
+<h3 id="excess-kurtosis">Excess Kurtosis<a class="headerlink" href="#excess-kurtosis" title="Permanent link">¶</a></h3>
+<p>Excess kurtosis is a metric to compare kurtosis of a normal distribution to that of the relevant data. </p>
+<p><strong>Excess Kurtosis = Kurtosis - 3</strong></p>
+<h3 id="types-of-kurtosis">Types of Kurtosis<a class="headerlink" href="#types-of-kurtosis" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Mesokurtic (Kurtosis ≈ 3): This distribution has kurtosis statistic similar or close to that of the normal distribution. This includes the outliers conforming to the normal distribution as well.</p>
+</li>
+<li>
+<p>Leptokurtic (Kurtosis &gt; 3): This Distribution is longer, tails are fatter, the bulk of data appears in a 'lean' vertical range. Peak is higher and sharper than Mesokurtic, which means that data are heavy-tailed or profusion of outliers.</p>
+</li>
+</ul>
+<p><img alt="Image" src="../images/tutorials-kurtosis.png">
+Pic credits: towardsdatascience.com</img></p>
+<ul>
+<li>Platykurtic: (Kurtosis &lt; 3): Distribution is shorter, tails are thinner than the normal distribution. The peak is lower and broader than Mesokurtic, which means that data is light-tailed and has a lack of outliers.</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../minerva/ondemandcompute/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  On Demand Computing
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../nestedfieldsinspark3/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Handle nested fields in Spark3
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

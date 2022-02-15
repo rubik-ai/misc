@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>RFM Analysis - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#rfm-recency-frequency-monetary">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              RFM Analysis
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          RFM Analysis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        RFM Analysis
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfm-recency-frequency-monetary">
+    RFM: Recency, Frequency, Monetary
+  </a>
+<nav aria-label="RFM: Recency, Frequency, Monetary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculating-recency-frequency-and-monetary">
+    Calculating Recency, Frequency and Monetary
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rfm-recency-frequency-monetary">
+    RFM: Recency, Frequency, Monetary
+  </a>
+<nav aria-label="RFM: Recency, Frequency, Monetary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculating-recency-frequency-and-monetary">
+    Calculating Recency, Frequency and Monetary
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>RFM Analysis</h1>
+<h2 id="rfm-recency-frequency-monetary">RFM: Recency, Frequency, Monetary<a class="headerlink" href="#rfm-recency-frequency-monetary" title="Permanent link">¶</a></h2>
+<p>RFM is a method where you identify customers based on the recency of their last purchase, the total number of purchases they have made (frequency) and the amount they have spent (monetary). The marketers can target specific customer groups with communications that are much pertinent to their specific shared behaviour</p>
+<ul>
+<li>
+<p><strong>Recency:</strong> The time elapsed since a customer’s last activity or transaction with the brand, forms the recency factor of RFM. An activity, though a transaction for most cases, can be a site/ store visit, adding products to cart etc. The guiding principle here is that the more recently a customer has interacted or transacted with a brand, the more likely that customer will be responsive to communications from the brand.</p>
+</li>
+<li>
+<p><strong>Frequency:</strong> The number of times a customer transacted or interacted with the brand during a time window. The guiding principle here is that more frequent the activities by a customer the more engaged anf loyal they are; and vice versa.</p>
+</li>
+<li>
+<p><strong>Monetary:</strong> Also referred to as “monetary value,” this factor reflects how much a customer has spent with the brand during a particular period of time. Big spenders should usually be treated differently than customers who spend little. Combining this with frequency, an estimate on average spending can be made</p>
+</li>
+</ul>
+<h3 id="calculating-recency-frequency-and-monetary">Calculating Recency, Frequency and Monetary<a class="headerlink" href="#calculating-recency-frequency-and-monetary" title="Permanent link">¶</a></h3>
+<p>Consider the following data exploration query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span>                                             <span class="cm">/* main query*/</span>
+  <span class="n">trans_frequency</span><span class="p">,</span>
+  <span class="k">count</span><span class="p">(</span><span class="n">accountname</span><span class="p">)</span> <span class="k">as</span> <span class="n">customer_count</span><span class="p">,</span>
+  <span class="n">round</span><span class="p">(</span><span class="k">avg</span><span class="p">(</span><span class="n">ltv</span><span class="p">))</span> <span class="k">as</span> <span class="n">avg_ltv</span><span class="p">,</span>
+  <span class="n">round</span><span class="p">(</span><span class="k">avg</span><span class="p">(</span><span class="n">avg_rev</span><span class="p">))</span> <span class="k">as</span> <span class="n">avg_rev</span>
+<span class="k">from</span>
+  <span class="p">(</span>
+    <span class="k">select</span>                                         <span class="cm">/* sub-query */</span>
+      <span class="n">accountname</span><span class="p">,</span>
+      <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">transaction_id</span><span class="p">)</span> <span class="k">as</span> <span class="n">trans_frequency</span><span class="p">,</span>
+      <span class="n">round</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">product_revenue</span><span class="p">))</span> <span class="k">as</span> <span class="n">ltv</span><span class="p">,</span>
+      <span class="n">round</span><span class="p">(</span><span class="k">avg</span><span class="p">(</span><span class="n">transaction_revenue</span><span class="p">))</span> <span class="k">as</span> <span class="n">avg_rev</span>
+    <span class="k">from</span>
+      <span class="n">raw01</span><span class="p">.</span><span class="n">orders_05</span>
+    <span class="k">group</span> <span class="k">by</span> <span class="mi">1</span> 
+    <span class="k">order</span> <span class="k">by</span> <span class="mi">2</span> <span class="k">desc</span>
+  <span class="p">)</span>
+<span class="k">group</span> <span class="k">by</span> <span class="mi">1</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="mi">1</span>
+</code></pre></div>
+<p>The query has a nested sub-query inside, which creates an output table having the transaction frequency (trans_frequency), lifetime value (ltv) and average revenue per transaction (avg_rev) grouped by the name (accountname). Sample output is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>accountname</th>
+<th>trans_frequency</th>
+<th>ltv</th>
+<th>avg_rev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acc1</td>
+<td>488</td>
+<td>667890</td>
+<td>1984</td>
+</tr>
+<tr>
+<td>Acc2</td>
+<td>389</td>
+<td>547900</td>
+<td>2051</td>
+</tr>
+<tr>
+<td>Acc3</td>
+<td>356</td>
+<td>172072</td>
+<td>662</td>
+</tr>
+</tbody>
+</table>
+<p>The main query here tries to understand the distribution of customers in frequency bands.</p>
+<table>
+<thead>
+<tr>
+<th>trans_frequency</th>
+<th>customer_count</th>
+<th>avg_ltv</th>
+<th>avg_rev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>205</td>
+<td>1</td>
+<td>185767</td>
+<td>1746</td>
+</tr>
+<tr>
+<td>208</td>
+<td>1</td>
+<td>181988</td>
+<td>1369</td>
+</tr>
+<tr>
+<td>203</td>
+<td>1</td>
+<td>178912</td>
+<td>992</td>
+</tr>
+</tbody>
+</table>
+<p>The following query delves into calculating the actual frequency (interactions) and on the basis of that, the recency.</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span>
+  <span class="n">days_since_last_purchase</span><span class="p">,</span>
+  <span class="k">count</span><span class="p">(</span><span class="n">accountname</span><span class="p">)</span> <span class="k">as</span> <span class="n">customer_count</span>
+<span class="k">from</span>
+  <span class="p">(</span>
+    <span class="k">select</span>
+      <span class="n">accountname</span><span class="p">,</span>
+      <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="nb">date</span><span class="p">)</span> <span class="k">as</span> <span class="n">frequency</span><span class="p">,</span>
+      <span class="n">round</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">product_revenue</span><span class="p">))</span> <span class="k">as</span> <span class="n">ltv</span><span class="p">,</span>
+      <span class="n">date_diff</span><span class="p">(</span><span class="s1">'day'</span><span class="p">,</span> <span class="k">max</span><span class="p">(</span><span class="nb">date</span><span class="p">(</span><span class="n">date_parse</span><span class="p">(</span><span class="nb">date</span><span class="p">,</span><span class="s1">'%Y%m%d'</span><span class="p">))),</span> <span class="k">current_date</span><span class="p">)</span> <span class="k">as</span> <span class="n">days_since_last_purchase</span>
+    <span class="k">from</span>
+      <span class="n">raw01</span><span class="p">.</span><span class="n">orders_05</span>
+    <span class="k">group</span> <span class="k">by</span> <span class="mi">1</span> 
+    <span class="k">order</span> <span class="k">by</span> <span class="mi">2</span> <span class="k">desc</span>
+  <span class="p">)</span>
+<span class="k">group</span> <span class="k">by</span>
+  <span class="mi">1</span>
+<span class="k">order</span> <span class="k">by</span>
+  <span class="mi">1</span>
+</code></pre></div>
+<p>The sub-query lists 'distinct' date as frequency, because every row (interaction) has a unique timestamp and hence its count is the effective frequency we need for our analysis. The date_diff here tries to mark the recency in days, of a customer's interactions; by calculating the day difference between interaction date and today.
+Sample output is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>accountname</th>
+<th>frequency</th>
+<th>ltv</th>
+<th>days_since_last_purchase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AccA</td>
+<td>33</td>
+<td>81897</td>
+<td>75</td>
+</tr>
+<tr>
+<td>AccB</td>
+<td>33</td>
+<td>133918</td>
+<td>63</td>
+</tr>
+<tr>
+<td>AccC</td>
+<td>32</td>
+<td>118922</td>
+<td>66</td>
+</tr>
+</tbody>
+</table>
+<p>The main query tries to group the customers into recency bands. The sample output is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>days_since_last_purchase</th>
+<th>customer_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>63</td>
+<td>2951</td>
+</tr>
+<tr>
+<td>64</td>
+<td>3188</td>
+</tr>
+<tr>
+<td>65</td>
+<td>3372</td>
+</tr>
+</tbody>
+</table>
+<p>For calculating the monetary value, we work on customer's ltv. Bucketizing it and dividing the customers in groups based on the buckets.</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> 
+  <span class="p">(</span><span class="k">case</span> 
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">250</span> <span class="k">then</span> <span class="s1">'$250'</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">250</span> <span class="k">AND</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">550</span> <span class="k">then</span> <span class="s1">'$250-$550'</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">550</span> <span class="k">and</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">1200</span> <span class="k">THEn</span> <span class="s1">'$550-$1200'</span>
+    <span class="k">WHEN</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">1200</span> <span class="k">AND</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">3000</span> <span class="k">then</span> <span class="s1">'$1200 - $3000'</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">3000</span> <span class="k">then</span> <span class="s1">'&gt;$3000'</span>
+  <span class="k">end</span><span class="p">)</span> <span class="k">as</span> <span class="n">ltv_bucket</span><span class="p">,</span> 
+  <span class="k">count</span><span class="p">(</span><span class="n">accountname</span><span class="p">)</span> <span class="k">as</span> <span class="n">customer_count</span> <span class="k">from</span> 
+<span class="p">(</span><span class="k">select</span>
+  <span class="n">account_id</span><span class="p">,</span>
+  <span class="n">accountname</span><span class="p">,</span>
+  <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="nb">date</span><span class="p">)</span> <span class="k">as</span> <span class="n">frequency</span><span class="p">,</span>
+  <span class="n">round</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">product_revenue</span><span class="p">))</span> <span class="k">as</span> <span class="n">ltv</span><span class="p">,</span>
+  <span class="n">date_diff</span><span class="p">(</span><span class="s1">'day'</span><span class="p">,</span> <span class="k">max</span><span class="p">(</span><span class="nb">date</span><span class="p">(</span><span class="n">date_parse</span><span class="p">(</span><span class="nb">date</span><span class="p">,</span><span class="s1">'%Y%m%d'</span><span class="p">))),</span> <span class="k">current_date</span><span class="p">)</span> <span class="k">as</span> <span class="n">days_since_last_purchase</span>
+<span class="k">from</span>
+  <span class="n">raw01</span><span class="p">.</span><span class="n">orders_05</span>
+<span class="k">group</span> <span class="k">by</span>
+  <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">group</span> <span class="k">by</span> <span class="mi">1</span>
+</code></pre></div>
+<p>The sample output is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>ltv_bucket</th>
+<th>customer_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$250</td>
+<td>7207</td>
+</tr>
+<tr>
+<td>$250 - $550</td>
+<td>5443</td>
+</tr>
+<tr>
+<td>$550 - $1200</td>
+<td>5999</td>
+</tr>
+<tr>
+<td>$1200 - $3000</td>
+<td>6768</td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;$3000</td>
+</tr>
+</tbody>
+</table>
+<p>These queries try to get the recency, frequency and monetary value separately and accordingly group the customers. However, unless customers have a score attached to their RFM values, the exercise is not fruitful. </p>
+<p>Keeping that in mind, the following query tries to attach scores to each customer based on their RFM values.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">create</span> <span class="k">view</span> <span class="n">raw01</span><span class="p">.</span><span class="n">orders_rfm_analysis</span> <span class="k">as</span>
+<span class="p">(</span><span class="k">select</span> 
+  <span class="n">account_id</span><span class="p">,</span>
+  <span class="n">accountname</span><span class="p">,</span>
+  <span class="n">frequency</span><span class="p">,</span>
+  <span class="n">recency</span><span class="p">,</span>
+  <span class="n">ltv</span><span class="p">,</span>
+  <span class="k">case</span> 
+    <span class="k">when</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">then</span> <span class="mi">1</span>
+    <span class="k">when</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">then</span> <span class="mi">2</span>
+    <span class="k">when</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">3</span> <span class="k">then</span> <span class="mi">3</span>
+    <span class="k">when</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">4</span> <span class="k">then</span> <span class="mi">4</span>
+    <span class="k">when</span> <span class="n">frequency</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="k">then</span> <span class="mi">5</span>
+  <span class="k">end</span> <span class="k">as</span> <span class="n">f_score</span><span class="p">,</span>
+  <span class="k">case</span> 
+    <span class="k">when</span> <span class="n">recency</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">then</span> <span class="mi">5</span>
+    <span class="k">when</span> <span class="n">recency</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">then</span> <span class="mi">4</span>
+    <span class="k">when</span> <span class="n">recency</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="k">and</span> <span class="n">recency</span> <span class="o">&lt;=</span> <span class="mi">7</span> <span class="k">then</span> <span class="mi">3</span>
+    <span class="k">when</span> <span class="n">recency</span> <span class="o">&gt;</span> <span class="mi">7</span> <span class="k">and</span> <span class="n">recency</span> <span class="o">&lt;=</span> <span class="mi">14</span> <span class="k">then</span> <span class="mi">2</span>
+    <span class="k">when</span> <span class="n">recency</span> <span class="o">&gt;</span> <span class="mi">14</span> <span class="k">then</span> <span class="mi">1</span>
+  <span class="k">end</span> <span class="k">as</span> <span class="n">r_score</span><span class="p">,</span>
+  <span class="k">case</span> 
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">250</span> <span class="k">then</span> <span class="mi">1</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">250</span> <span class="k">AND</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">550</span> <span class="k">then</span> <span class="mi">2</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">550</span> <span class="k">and</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">1200</span> <span class="k">THEn</span> <span class="mi">3</span>
+    <span class="k">WHEN</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">1200</span> <span class="k">AND</span> <span class="n">ltv</span> <span class="o">&lt;=</span> <span class="mi">3000</span> <span class="k">then</span> <span class="mi">4</span>
+    <span class="k">when</span> <span class="n">ltv</span> <span class="o">&gt;</span> <span class="mi">3000</span> <span class="k">then</span> <span class="mi">5</span>
+  <span class="k">end</span> <span class="k">as</span> <span class="n">m_score</span>
+<span class="k">FROM</span>
+<span class="p">(</span><span class="k">select</span>
+  <span class="n">account_id</span><span class="p">,</span>
+  <span class="n">accountname</span><span class="p">,</span>
+  <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="nb">date</span><span class="p">)</span> <span class="k">as</span> <span class="n">frequency</span><span class="p">,</span>
+  <span class="n">round</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">product_revenue</span><span class="p">))</span> <span class="k">as</span> <span class="n">ltv</span><span class="p">,</span>
+  <span class="n">date_diff</span><span class="p">(</span><span class="s1">'day'</span><span class="p">,</span> <span class="k">max</span><span class="p">(</span><span class="nb">date</span><span class="p">(</span><span class="n">date_parse</span><span class="p">(</span><span class="nb">date</span><span class="p">,</span><span class="s1">'%Y%m%d'</span><span class="p">))),</span> <span class="k">current_date</span><span class="p">)</span> <span class="k">as</span> <span class="n">recency</span>
+<span class="k">from</span>
+  <span class="n">raw01</span><span class="p">.</span><span class="n">orders_05</span>
+<span class="k">group</span> <span class="k">by</span>
+  <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+  <span class="o">```</span>
+
+<span class="n">The</span> <span class="n">actual</span> <span class="n">RFM</span> <span class="k">values</span> <span class="k">are</span> <span class="n">mapped</span> <span class="k">to</span> <span class="n">scores</span><span class="p">.</span> <span class="n">The</span> <span class="n">scores</span> <span class="k">are</span> <span class="n">marked</span> <span class="k">from</span> <span class="mi">1</span> <span class="k">to</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span> <span class="n">being</span> <span class="n">the</span> <span class="n">most</span> <span class="n">preferred</span> <span class="n">value</span> <span class="k">and</span> <span class="mi">1</span> <span class="n">being</span> <span class="n">the</span> <span class="n">least</span><span class="p">.</span> <span class="n">This</span> <span class="n">bucketization</span> <span class="n">brings</span> <span class="k">all</span> <span class="n">customers</span> <span class="k">to</span> <span class="n">a</span> <span class="k">level</span> <span class="n">playing</span> <span class="n">field</span><span class="p">,</span> <span class="k">to</span> <span class="n">further</span> <span class="k">group</span> <span class="n">them</span> <span class="k">and</span> <span class="k">in</span> <span class="n">effect</span><span class="p">,</span> <span class="n">identify</span> <span class="n">the</span> <span class="n">priority</span> <span class="n">ones</span><span class="p">.</span>
+
+<span class="n">A</span> <span class="n">sample</span> <span class="k">of</span> <span class="k">rows</span> <span class="k">in</span> <span class="n">the</span> <span class="k">view</span> <span class="k">is</span> <span class="k">as</span> <span class="n">follows</span><span class="p">:</span>
+
+<span class="n">account_id</span> <span class="o">|</span> <span class="n">accountname</span> <span class="o">|</span> <span class="n">frequency</span> <span class="o">|</span> <span class="n">recency</span> <span class="o">|</span> <span class="n">ltv</span> <span class="o">|</span> <span class="n">f_score</span> <span class="o">|</span> <span class="n">r_score</span> <span class="o">|</span> <span class="n">m_score</span>
+<span class="c1">--- | --- | --- | --- | --- | --- | --- | ---</span>
+<span class="mi">8509724</span> <span class="o">|</span> <span class="n">AcctA</span> <span class="o">|</span> <span class="mi">14</span> <span class="o">|</span>  <span class="mi">3</span> <span class="o">|</span> <span class="mi">22509</span> <span class="o">|</span> <span class="mi">5</span> <span class="o">|</span> <span class="mi">3</span> <span class="o">|</span> <span class="mi">5</span>
+<span class="mi">4609619</span> <span class="o">|</span> <span class="n">AcctB</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span>  <span class="mi">6</span> <span class="o">|</span> <span class="mi">25972</span> <span class="o">|</span> <span class="mi">3</span> <span class="o">|</span> <span class="mi">3</span> <span class="o">|</span> <span class="mi">5</span>
+<span class="mi">1002949</span> <span class="o">|</span> <span class="n">AcctC</span> <span class="o">|</span> <span class="mi">2</span>  <span class="o">|</span> <span class="mi">68</span> <span class="o">|</span>  <span class="mi">1641</span> <span class="o">|</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">4</span>
+<span class="mi">1602819</span> <span class="o">|</span> <span class="n">AcctX</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="mi">81</span> <span class="o">|</span>  <span class="mi">1004</span> <span class="o">|</span> <span class="mi">3</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">3</span>
+
+<span class="n">Customers</span> <span class="k">with</span> <span class="n">different</span> <span class="n">combination</span> <span class="k">of</span> <span class="n">scores</span> <span class="n">would</span> <span class="n">mean</span> <span class="n">different</span> <span class="s1">'segments'</span><span class="p">.</span> <span class="n">These</span> <span class="n">segments</span> <span class="k">are</span> <span class="n">the</span> <span class="n">actual</span> <span class="n">deliverable</span> <span class="k">of</span> <span class="n">the</span> <span class="n">exercise</span><span class="p">,</span> <span class="n">pointing</span> <span class="k">to</span> <span class="n">the</span> <span class="k">current</span> <span class="k">state</span> <span class="k">of</span> <span class="n">the</span> <span class="n">customer</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="n">following</span> <span class="n">query</span> <span class="n">tries</span> <span class="k">to</span> <span class="n">define</span> <span class="k">some</span> <span class="k">of</span> <span class="n">the</span> <span class="n">segments</span> <span class="n">based</span> <span class="k">on</span> <span class="n">the</span> <span class="n">scores</span> <span class="n">identified</span> <span class="n">above</span><span class="p">:</span>
+
+<span class="o">```</span> <span class="k">sql</span>
+<span class="k">create</span> <span class="k">view</span> <span class="n">raw01</span><span class="p">.</span><span class="n">segments</span> <span class="k">as</span>
+<span class="k">select</span>
+  <span class="n">account_id</span><span class="p">,</span>
+  <span class="n">accountname</span><span class="p">,</span>
+  <span class="n">frequency</span> <span class="k">as</span> <span class="n">overall_frequency</span><span class="p">,</span>
+  <span class="n">recency</span> <span class="k">as</span> <span class="n">overall_recency</span><span class="p">,</span>
+  <span class="n">ltv</span> <span class="k">as</span> <span class="n">overall_ltv</span><span class="p">,</span>
+  <span class="n">f_score</span> <span class="k">as</span> <span class="n">overall_f_score</span><span class="p">,</span>
+  <span class="n">r_score</span> <span class="k">as</span> <span class="n">overall_r_score</span><span class="p">,</span>
+  <span class="n">m_score</span> <span class="k">as</span> <span class="n">overall_m_score</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_champions</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">3</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">3</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_loyal_customers</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">3</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_potential_loyalist</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">1</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_recent_customers</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">3</span> <span class="k">and</span> <span class="mi">4</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">1</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_promising</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_customer_needs_attention</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">3</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_about_to_sleep</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">2</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_at_risk</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">1</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">4</span> <span class="k">and</span> <span class="mi">5</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_cant_lose_them</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_hibernating</span><span class="p">,</span>
+  <span class="k">case</span> <span class="k">when</span> <span class="p">(</span><span class="n">r_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">f_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">m_score</span> <span class="k">between</span> <span class="mi">0</span> <span class="k">and</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span> <span class="s1">'Y'</span> <span class="k">else</span> <span class="s1">'N'</span> <span class="k">end</span> <span class="k">as</span> <span class="n">overall_lost</span>
+<span class="k">from</span> <span class="n">raw01</span><span class="p">.</span><span class="n">orders_rfm_analysis</span>
+</code></pre></div>
+Champions: Top tier (4 to 5) recency, frequency and monetary values. These are the priority target customers, deserving most attention and care.</p>
+<p>Loyal Customers: A recency score ranging from 2 to 5, frequency and monetary scores ranging from 3 to 5 point to a group of customers who are frequent and have a decent average transaction value but may not be as recent.</p>
+<p>Potential Loyalists: A recency score ranging from 3 to 5, frequency and monetary scores ranging from 1 to 3 point to a group of customers who are less frequent and have low average transaction value but are recent, and with appropriate targetting, can upscale to Loyal customers.</p>
+<p>Recent Customers: A recency score ranging from 4 to 5, frequency and monetary scores ranging from 0 to 1 point to a group of customers who have recently shown interest in the product. This may be the right time to target such customers.</p>
+<p>Promising Customers: A recency score ranging from 3 to 4, frequency and monetary scores ranging from 0 to 1 point to a group of customers who have fairly recently shown interest in the product. This may be the right time to target such customers.</p>
+<p>Customers needing attention: A recency, frequency and monetary scores ranging from 2 to 3 point to a group of customers who need immediate attention to upscale to Loyal or champion customers.</p>
+<p>Customers about to sleep: A recency score ranging from 2 to 3, frequency and monetary scores ranging from 0 to 2 point to a group of customers who close to being dormant/ go into hibernation.</p>
+<p>Customers at risk: A recency score ranging from 0 to 2, frequency and monetary scores ranging from 2 to 5 point to a group of customers who might be lost and need attention.</p>
+<p>Customers that shouldn't be lost ('Can't lose them'): A recency score ranging from 0 to 2, frequency and monetary scores ranging from 2 to 5 point to a group of customers who have a potential to be champions but have not shown any interest recently.</p>
+<p>Hibernating customers: A recency, frequency and monetary scores ranging from 1 to 2 point to a group of customers who are dormant or hibernating. Any efforts to target these customers can be deprioritized.</p>
+<p>Lost customers: A recency, frequency and monetary scores ranging from 0 to 2 point to a group of customers who are lost and all further efforts to target these customers should be stopped.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../nestedfieldsinspark3/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Handle nested fields in Spark3
+                </div>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

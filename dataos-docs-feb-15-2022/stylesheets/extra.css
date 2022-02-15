@@ -1,0 +1,60 @@
+html {
+    scroll-padding-top: 80px;
+}
+body {
+    font-size: 0.85rem;
+}
+.md-header-nav__topic .md-ellipsis{
+    position: relative;
+    padding-right: 20px;
+}
+.md-header-nav__topic pre {
+    padding: 0;
+    margin: 0;
+    white-space: unset;
+    position: absolute;
+    right: 7px;
+    top: -10px;
+    color: inherit;
+}
+.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
+    display: unset;
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+}
+.md-typeset h1 {
+    color: inherit;
+}
+/* .md-header {
+    background-color: #fff;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 10%) !important;
+}
+.md-header-nav__button {
+    color: #000 !important;
+    display:flex;
+}
+@media screen and (min-width: 60em) {
+    .md-search__input {
+        background-color: #fff;
+        border: 1px solid #eee;
+        color: #000 !important;
+    }
+    .md-search__input+.md-search__icon {
+        color: #000 !important;
+    }
+    .md-search__input~.md-search__icon, .md-search__input::placeholder {
+        color: #000 !important;
+    }
+} */
+
+code {
+    white-space : pre-wrap !important;
+}
+
+.md-typeset {
+    font-size: 0.7rem !important;
+}
+.md-nav {
+    font-size: 0.7rem !important;
+}

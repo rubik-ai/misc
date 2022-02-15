@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Integrate with Power BI - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#integrate-with-power-bi">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Integrate with Power BI
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+    Purpose:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-driver">
+    Download driver:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-simba-presto-odbc-driver">
+    Install Simba Presto ODBC driver
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-odbc-dsn">
+    Configure ODBC DSN
+  </a>
+<nav aria-label="Configure ODBC DSN" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-generate-login-key-">
+    -- Generate login key --
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connect-presto-to-power-bi">
+    Connect Presto to Power BI:
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="integrate-with-power-bi">Integrate with Power BI<a class="headerlink" href="#integrate-with-power-bi" title="Permanent link">¶</a></h1>
+<h3 id="purpose">Purpose:<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h3>
+<p>Power BI business analytics solution comprises several products and services, and value and versatility comes from leveraging the individual elements, and taking advantage of how they work together.</p>
+<p>The following text streamlines the integration with Power BI, to make it quick and straightforward.</p>
+<h3 id="download-driver">Download driver:<a class="headerlink" href="#download-driver" title="Permanent link">¶</a></h3>
+<p>Download and install <code>Simba Presto ODBC Driver</code> from the following link </p>
+<p>https://www.simba.com/drivers/presto-odbc-jdbc/</p>
+<h3 id="install-simba-presto-odbc-driver">Install Simba Presto ODBC driver<a class="headerlink" href="#install-simba-presto-odbc-driver" title="Permanent link">¶</a></h3>
+<p>a) Double-click the downloaded driver file to start the installation process, click <code>Next</code> and follow the instructions.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-simbapresto-odbc-powerbi-install-1.png"> </img></p>
+<p><img alt="Image" src="../images/integrations-powerbi-simbapresto-odbc-powerbi-install-2.png"/></p>
+<p>b) After successful installation, copy the license file (that you must have received in your email) into the <code>\lib</code> subfolder of the installation folder you selected above. </p>
+<p><img alt="Image" src="../images/integrations-powerbi-licensefile.png"/></p>
+<p>In case you encounter an error, you may not have the required admin priviliges. Contact your network administrator to accomplish this.</p>
+<h3 id="configure-odbc-dsn">Configure ODBC DSN<a class="headerlink" href="#configure-odbc-dsn" title="Permanent link">¶</a></h3>
+<p>After successful installation, proceed as follows to configure ODBC DSN:</p>
+<p>a) ODBC Data Sources (64-bit) Go to ODBC Sources Administrator(64 bit or 32 bit) and open it.</p>
+<p>b) In the dialogue box select <code>System DSN</code> tab</p>
+<p><img alt="Image" src="../images/integrations-powerbi-odbc-data-source-adminstration.png"/></p>
+<p>c) Now click <code>Add</code> and select driver name which you entered during driver installation process and click <code>Finish</code></p>
+<p><img alt="Image" src="../images/integrations-powerbi-create-new-data-source.png"/></p>
+<p>d) A new dialogue box opens up for ODBC driver DSN setup</p>
+<ul>
+<li>In the DSN Setup section, provide  <code>Data Source Name</code> and 'Description' </li>
+<li>In the Authentication section, Select Authentication type as <code>No Authentication</code></li>
+<li>Enter username and the system generated login key  </li>
+<li>
+<p>Now in the Data Source section, provide required information (example follows)</p>
+<ul>
+<li><code>Host</code> (e.g annually-harmless-lark.dataos.io)</li>
+<li><code>Port</code> (e.g 7432)</li>
+<li><code>Catalog</code> (e.g hive)</li>
+<li><code>Schema</code> (optional)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Image" src="../images/integrations-powerbi-dns-setup-2-blank.png"/></p>
+<h4 id="-generate-login-key-">-- Generate login key --<a class="headerlink" href="#-generate-login-key-" title="Permanent link">¶</a></h4>
+<p>Coming soon...</p>
+<p>e) Perform <code>Test</code> action and successful test results imply a successfull connection to the data source.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-test-results.png"/></p>
+<h3 id="connect-presto-to-power-bi">Connect Presto to Power BI:<a class="headerlink" href="#connect-presto-to-power-bi" title="Permanent link">¶</a></h3>
+<p>a) Launch Power BI and click on the <code>Get Data</code> option in top menu bar</p>
+<p><img alt="Image" src="../images/integrations-powerbi-get-data-from-another-source.png"/></p>
+<p>b) Search for the option of ODBC from the data source list, then select ODBC and click on <code>Connect</code>.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-get-data-odbc.png"/></p>
+<p>c) Select the DSN you tested successfully during the DSN setup process, and click <code>OK</code></p>
+<p><img alt="Image" src="../images/integrations-powerbi-from-odbc.png"/></p>
+<p>d) Enter the username, password in the dialogue box and click on <code>Connect</code>.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-username-password.png"/></p>
+<p>e) Post a successful connection, you can preview the data.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-data-preview.png"/></p>
+<p>f) Tick the checkbox of the relevant dataset/table in the left menu and click <code>Load</code>.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-load-data.png"/></p>
+<p>g) Now you are ready to work with Power BI chart visualization activities.</p>
+<p><img alt="Image" src="../images/integrations-powerbi-load-data-view-with-chart.png"/></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Installation[Internal Users] - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#dataos-cli-install-and-set-up-for-internal-users">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Installation[Internal Users]
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation[Internal Users]
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Installation[Internal Users]
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download">
+    Download
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialize">
+    Initialize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-in">
+    Log in
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test">
+    Test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operator-configuration">
+    Operator configuration
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download">
+    Download
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialize">
+    Initialize
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-in">
+    Log in
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test">
+    Test
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operator-configuration">
+    Operator configuration
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="dataos-cli-install-and-set-up-for-internal-users">DataOS CLI Install and Set Up [For Internal Users]<a class="headerlink" href="#dataos-cli-install-and-set-up-for-internal-users" title="Permanent link">¶</a></h1>
+<p>This article describes the steps required to install DataOS CLI. These installation steps are for Unix/Linux based shell. </p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<ul>
+<li>Google Chrome browser installed.</li>
+<li>Access permissions given for the BitBucket repository.</li>
+<li>curl utility installed.</li>
+</ul>
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">¶</a></h2>
+<p>To download the latest release from the bitbucket repository, you need username and an app-password.</p>
+<ol>
+<li>
+<p>Generate app password, go to the following link.</p>
+<div class="highlight"><pre><span></span><code>Username:Your bitbucket username.
+
+Password: It is a token string that you have to generate from the following link. 
+
+link- https://bitbucket.org/account/settings/app-passwords/ 
+</code></pre></div>
+</li>
+<li>
+<p>Open a terminal on your operating system and run the following commands.</p>
+<div class="highlight"><pre><span></span><code>export BITBUCKET_USERNAME=&lt;your_username&gt;
+
+export BITBUCKET_APP_PASSWORD=&lt;generated_app_password&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Run the curl command to download the dataos-CLI file.</p>
+<div class="highlight"><pre><span></span><code>curl -L --user $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD https://api.bitbucket.org/2.0/repositories/rubik_/dataos-cli/downloads/download-dataos-ctl.sh | bash
+</code></pre></div>
+</li>
+<li>
+<p>Add the bin folder to the PATH.</p>
+<div class="highlight"><pre><span></span><code>export PATH=$PATH:$HOME/.dataos/bin
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: You can also download from the UI Downloads section of the Repo: https://bitbucket.org/rubik_/dataos-cli/downloads/</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="initialize">Initialize<a class="headerlink" href="#initialize" title="Permanent link">¶</a></h2>
+<p>You are ready to run DataOS CLI with the dataos-ctl command. To initialize, run the init command.</p>
+<p><div class="highlight"><pre><span></span><code>dataos-ctl init
+</code></pre></div>
+Provide the following:</p>
+<ul>
+<li>
+<p>License</p>
+</li>
+<li>
+<p>API key </p>
+</li>
+</ul>
+<blockquote>
+<p><em>This is only for the 'Operator' level user of DataOS who wants to install and perform admin tasks. For additional steps in Operator configuration, click on <a href="" title="##5.OperatorConfiguration">here</a></em></p>
+</blockquote>
+<ul>
+<li>
+<p>Context name</p>
+</li>
+<li>
+<p>Fully qualified domain name</p>
+</li>
+</ul>
+<p>This command will produce the following output:</p>
+<div class="highlight"><pre><span></span><code> ~ % dataos-ctl init
+INFO[0000] 🚀 initialization...                          
+INFO[0000] The DataOS® is not initialized, do you want to proceed with initialization? (Y,n)  
+-&gt;Y
+INFO[0012] Please enter your license key?               
+-&gt;wru-123456
+INFO[0369] Are you installing and operating the DataOS®? (Y,n)  
+-&gt;Y
+INFO[0397] Please enter your DataOS® Prime Apikey?      
+-&gt;MmI4MjFiNDctZDZjZC00ODRmLThmYzMtOGI4NDAwY2U0ZWE1
+INFO[0432] Please enter a name for the current DataOS® Context?  
+-&gt;formerly-saving-lynx
+INFO[0456] Please enter the fully qualified domain name of the DataOS®?  
+-&gt;formerly-saving-lynx.dataos.io
+INFO[0486] entered DataOS®: formerly-saving-lynx : formerly-saving-lynx.dataos.io 
+INFO[0486] 🚀 initialization...complete                  
+ ~ % 
+</code></pre></div>
+<h2 id="log-in">Log in<a class="headerlink" href="#log-in" title="Permanent link">¶</a></h2>
+<p>After successful initialization of DataOS CLI, you can log in to CLI with the following command.</p>
+<div class="highlight"><pre><span></span><code>dataos-ctl login
+</code></pre></div>
+<h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link">¶</a></h2>
+<p>Run the following commands to ensure the successful installation of DataOS CLI. These command will show the version and health status of the installed DataOS CLI.
+<div class="highlight"><pre><span></span><code>dataos-ctl version
+dataos-ctl health
+</code></pre></div></p>
+<h2 id="operator-configuration">Operator configuration<a class="headerlink" href="#operator-configuration" title="Permanent link">¶</a></h2>
+<p>The following steps should only be setup for operators of the DataOS platform, users who need to install components into the DataOS and run administrative jobs.</p>
+<ol>
+<li>
+<p>Download Helm-3. Make sure that Helm-3 version should be v3.2.0 and above.</p>
+<p><div class="highlight"><pre><span></span><code>curl -L https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+</code></pre></div>
+2. Run the following commands to access Kubernetes layer.</p>
+<p><div class="highlight"><pre><span></span><code>export KUBECONFIG=~/.dataos/&lt;context name&gt;/.dataos.ck.k8s.config.yaml
+
+gcloud container clusters get-credentials &lt;cluster name&gt; -- region &lt;region&gt; --project &lt;project name&gt;
+</code></pre></div>
+For example:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context name</td>
+<td>reasonably-welcome-grub</td>
+</tr>
+<tr>
+<td>cluster name</td>
+<td>dataos-ck-gke-grub-dev</td>
+</tr>
+<tr>
+<td>region</td>
+<td>us-west-4</td>
+</tr>
+<tr>
+<td>project name</td>
+<td>dataos-ck-res-yak-dev</td>
+</tr>
+</tbody>
+</table>
+<p>With the above values, your commands may look like the following:
+<div class="highlight"><pre><span></span><code>export KUBECONFIG=~/.dataos/reasonably-welcome-grub/.dataos.ck.k8s.config.yaml
+
+gcloud container clusters get-credentials dataos-ck-gke-grub-dev --region us-west4 --project dataos-ck-res-yak-dev
+</code></pre></div></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../installationcli/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Installation
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../cli/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Reference
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>On Demand Computing - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#on-demand-computing-in-progress">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              On Demand Computing
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          On Demand Computing
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        On Demand Computing
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tightly-coupled-storage-and-compute">
+    Tightly coupled storage and compute
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-of-separation-between-compute-and-storage">
+    Power of separation between compute and storage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on-demand-compute-in-dataos">
+    On-Demand Compute in DataOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compute-structures-in-dataos">
+    Compute structures in DataOS
+  </a>
+<nav aria-label="Compute structures in DataOS" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#provisioning-vms">
+    Provisioning VMs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-compute-resources-in-dataos">
+    Define compute resources in DataOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-minerva-clusters">
+    Create Minerva clusters
+  </a>
+<nav aria-label="Create Minerva clusters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-cluster-groups">
+    Define Cluster groups
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-service-access-to-on-demand-compute-on-workbench">
+    Self-service access to on-demand compute on Workbench
+  </a>
+<nav aria-label="Self-service access to on-demand compute on Workbench" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-clusters-for-your-query">
+    Selecting clusters for your query
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-queries-status">
+    Running queries status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-clusters">
+    List of Clusters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-clusters">
+    Managing Clusters
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cluster-usage-status">
+    Cluster usage status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#routingpolicy">
+    RoutingPolicy
+  </a>
+<nav aria-label="RoutingPolicy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-your-own-rules">
+    Adding your own rules
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#policies-around-cluster-access">
+    Policies around cluster access
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tightly-coupled-storage-and-compute">
+    Tightly coupled storage and compute
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-of-separation-between-compute-and-storage">
+    Power of separation between compute and storage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on-demand-compute-in-dataos">
+    On-Demand Compute in DataOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compute-structures-in-dataos">
+    Compute structures in DataOS
+  </a>
+<nav aria-label="Compute structures in DataOS" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#provisioning-vms">
+    Provisioning VMs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-compute-resources-in-dataos">
+    Define compute resources in DataOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-minerva-clusters">
+    Create Minerva clusters
+  </a>
+<nav aria-label="Create Minerva clusters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-cluster-groups">
+    Define Cluster groups
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-service-access-to-on-demand-compute-on-workbench">
+    Self-service access to on-demand compute on Workbench
+  </a>
+<nav aria-label="Self-service access to on-demand compute on Workbench" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-clusters-for-your-query">
+    Selecting clusters for your query
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-queries-status">
+    Running queries status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-clusters">
+    List of Clusters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-clusters">
+    Managing Clusters
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cluster-usage-status">
+    Cluster usage status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#routingpolicy">
+    RoutingPolicy
+  </a>
+<nav aria-label="RoutingPolicy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-your-own-rules">
+    Adding your own rules
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#policies-around-cluster-access">
+    Policies around cluster access
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="on-demand-computing-in-progress">On Demand Computing [In Progress]<a class="headerlink" href="#on-demand-computing-in-progress" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>In an enterprise system, demand for computing resources varies from time to time. In such a scenario, resources need to be provisioned to handle the increase/decrease in demand.</p>
+<p>On-demand computing is a delivery model in which computing resources such as computing power, storage, and memory are made available to the user as needed. The resources are provided on an as-needed and when-needed basis for specific data processing/exploratory analytical workloads.  </p>
+<p>The on-demand compute model overcomes the common challenge of efficiently meeting fluctuating computational requirements. Now you don't have to over-provision resources upfront to handle peak levels of business activity in the future. Instead, you provision the number of resources that you actually need. You can scale these resources up or down as your business needs change.</p>
+<h2 id="tightly-coupled-storage-and-compute">Tightly coupled storage and compute<a class="headerlink" href="#tightly-coupled-storage-and-compute" title="Permanent link">¶</a></h2>
+<p>The traditional data warehouses always come with a compute on top of the data; the nodes deployed in the cluster are used for storing data and computation. However, the requirement of Storage and Compute is not always linear, and it varies for different workloads. Some workloads are compute-intensive; others may require a large data storage volume. With the nodes doing both, the enterprise must scale both simultaneously.
+This tight coupling leads to underutilized or scarce resources either on Storage or Compute, not giving the optimal use of provisioned capacity.</p>
+<p>There are situations when the enterprise needs to grow compute capabilities while keeping storage relatively constant, such as during high-traffic periods like popular annual shopping events or at the end of the quarter consolidation. Scaling these functions independently frees the enterprise to pay only for what it uses, as it uses it.</p>
+<p>To work with the data stored in the warehouse, you have to go via the data warehouse's compute tier that creates performance issues while simultaneously trying to load and query data. </p>
+<p>Traditional cluster configuration does not have a shared data cluster. Therefore, if multiple clusters are to be provisioned for different types of workloads e.g., ELT/ELT, BI &amp; Reporting on same data- the only option is to copy or move the required data to their respective workload clusters leading to data duplication.</p>
+<h2 id="power-of-separation-between-compute-and-storage">Power of separation between compute and storage<a class="headerlink" href="#power-of-separation-between-compute-and-storage" title="Permanent link">¶</a></h2>
+<p>With decoupling the storage and compute, each of these can be scaled independent to each other.
+You can bring larger or smaller compute based on your needs.  So, for example, imagine a reporting query that you have to run, which is going to last for six hours because it's going to scan six months' worth of data. You can bring a larger cluster for six hours to run that query.  For complex queries you have to wait until data is completely loaded into the warehouse. </p>
+<p>Imagine that your team is trying to do ad-hoc analysis to understand what data they have, and typically, they're running queries on a smaller set of data. You need a smaller cluster, which is long-running. So, you have the ability to design your compute, which will work on the data to suffice the need that you're trying to address.</p>
+<p>You can manage two kinds of workloads – Batch and Interactive. Even in the case of Batch, there are ETL, dashboards queries, periodic reports, etc. In the case of ad hoc queries, the requirements might be specific to the user and use cases. For a data scientist, the data set and cluster capabilities requirements might be completely different from an analyst use case. The decoupling of storage and compute also works with individual departments as well. Many teams have their own budgeting constraints and work on different data sets. They like to have their own analytics setup and manage it according to their application lifecycle.</p>
+<p>This brings in huge cost savings and operational efficiencies as the resources are stood up only when they are required, only for the amount of resources that are required and only for the time they are required, after which they are terminated.</p>
+<h2 id="on-demand-compute-in-dataos">On-Demand Compute in DataOS<a class="headerlink" href="#on-demand-compute-in-dataos" title="Permanent link">¶</a></h2>
+<p>DataOS enables you to define and maintain a pool of resources that contains networks, servers, storage, applications, and services. This pool can serve the varying demand of resources and computing for various workload requirements. </p>
+<p>When you work with data in the  DataOS storage built on top of Iceberg table format, you can bring whatever compute you want. Data storage in DataOS, essentially a lake house pattern, gives you an open data format. </p>
+<p>DataOS maintains data as single source of truth, the Business and IT teams executing various workloads can now have access to the required data (as per the governance policies) without having to move it to their local cluster. This creates a much streamlined, effective and optimized approach to provisioning of data across the organization.</p>
+<p>You can create a Minerva query engine cluster, which allows you to query the data through depots that you have in the system. You can attach and create your own cluster within the DataOS instance.  The billing for that cluster can be attributed to you for your use case, and you can keep it private to yourself. So, you can be more cost-efficient.</p>
+<p>So, when you deploy your jobs for bringing data, like your Flare data processing jobs or querying your data on Workbench, you can ask for required compute.   </p>
+<p>To create an on-demand compute type, you need to know which cluster needs to run on a specific kind of machine. You need to understand what kind of compute works best on various types of queries. Then you will be able to decide do you want to run it faster or cheaper? And based on that, you can adjust the compute.</p>
+<h2 id="compute-structures-in-dataos">Compute structures in DataOS<a class="headerlink" href="#compute-structures-in-dataos" title="Permanent link">¶</a></h2>
+<p>Create compute clusters on-demand for varied data processing/querying needs.
+This section describes the steps to define and create various compute for the different workload requirements. To define compute structures in DataOS, follow the three steps process given below:</p>
+<ol>
+<li>
+<p>Provisioning VMs ​</p>
+</li>
+<li>
+<p>Define compute resource in DataOS​</p>
+</li>
+<li>
+<p>Refer compute resource in Flare job or Minerva cluster​</p>
+</li>
+</ol>
+<h3 id="provisioning-vms">Provisioning VMs<a class="headerlink" href="#provisioning-vms" title="Permanent link">¶</a></h3>
+<p>DataOS uses Kubernetes for cluster and container management. It supports creating/defining groups of VMs (node pools) that have a certain profile- a specific CPU,  memory, and disk capacity. You need to provision a group of VMs, register those with Kubernetes, and then with the DataOS as a compute resource. </p>
+<p>You can also create a group of VMs that use GPUs or a group of VMs with very small CPUs.  Then once you have these groups created, you can register them with the DataOS. So now they're known what computes you have. </p>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: Please contact your administrator for creating node pool.</p>
+</blockquote>
+<h3 id="define-compute-resources-in-dataos">Define compute resources in DataOS<a class="headerlink" href="#define-compute-resources-in-dataos" title="Permanent link">¶</a></h3>
+<p>Compute in the DataOS context is just another primitive. You can define and name these compute resourcesin a  YAML file. You can run applications in the DataOS by allocating memory through the resource manager.</p>
+<p>By Default, DataOS has two separate computes:</p>
+<p>1) runnable for running resources which are essentially our workflows and services 
+2) queries which are Minerva clusters </p>
+<p>When DataOS is deployed, these two computes are registered by default with the DataOS. So they are part of the default install. DataOS allows you to add new groups of VMs and make them known to the DataOS and addressable via a name. </p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">configure-dataos-resources-system</span>
+    <span class="l l-Scalar l-Scalar-Plain">values</span><span class="p p-Indicator">:</span>
+      <span class="nt">install_and_upgrade</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">"runnable-default"</span>
+          <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">compute</span>
+          <span class="nt">layer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">system</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="s">"default</span><span class="nv"> </span><span class="s">runnable</span><span class="nv"> </span><span class="s">compute"</span>
+          <span class="nt">compute</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">K8SNodePoolLocal</span>
+            <span class="nt">defaultFor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">runnable</span>
+            <span class="nt">nodePool</span><span class="p">:</span>
+              <span class="nt">nodeSelector</span><span class="p">:</span>
+                <span class="s">"dataos.io/purpose"</span><span class="p p-Indicator">:</span> <span class="s">"runnable"</span>
+              <span class="nt">tolerations</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="s">"dedicated"</span>
+                  <span class="nt">operator</span><span class="p">:</span> <span class="s">"Equal"</span>
+                  <span class="nt">value</span><span class="p">:</span> <span class="s">"runnable"</span>
+                  <span class="nt">effect</span><span class="p">:</span> <span class="s">"NoSchedule"</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">"query-default"</span>
+          <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">compute</span>
+          <span class="nt">layer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">system</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="s">"default</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">compute"</span>
+          <span class="nt">compute</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">K8SNodePoolLocal</span>
+            <span class="nt">defaultFor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query</span>
+            <span class="nt">nodePool</span><span class="p">:</span>
+              <span class="nt">nodeSelector</span><span class="p">:</span>
+                <span class="s">"dataos.io/purpose"</span><span class="p p-Indicator">:</span> <span class="s">"query"</span>
+              <span class="nt">tolerations</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="s">"dedicated"</span>
+                  <span class="nt">operator</span><span class="p">:</span> <span class="s">"Equal"</span>
+                  <span class="nt">value</span><span class="p">:</span> <span class="s">"query"</span>
+                  <span class="nt">effect</span><span class="p">:</span> <span class="s">"NoSchedule"</span>
+</code></pre></div>
+<h3 id="create-minerva-clusters">Create Minerva clusters<a class="headerlink" href="#create-minerva-clusters" title="Permanent link">¶</a></h3>
+<p>When you define a cluster,  you specify the node type. The node type determines each node's CPU, RAM, storage capacity, and storage drive type.
+For example,</p>
+<p>16 cores | 128 GB RAM | 2 TB of local storage</p>
+<p>The above specifications are just a minimum recommendation. You should consider increasing these specifications based on your workloads and the amount of data you are processing.
+Various data processing requirements force data engineering teams to create multiple clusters.</p>
+<h4 id="define-cluster-groups">Define Cluster groups<a class="headerlink" href="#define-cluster-groups" title="Permanent link">¶</a></h4>
+<p>To learn more refer-  <a href="../tuneminerva/">Minerva Cluster Tuning</a></p>
+<h2 id="self-service-access-to-on-demand-compute-on-workbench">Self-service access to on-demand compute on Workbench<a class="headerlink" href="#self-service-access-to-on-demand-compute-on-workbench" title="Permanent link">¶</a></h2>
+<h3 id="selecting-clusters-for-your-query">Selecting clusters for your query<a class="headerlink" href="#selecting-clusters-for-your-query" title="Permanent link">¶</a></h3>
+<p>Default clusters
+You can choose to connect to Minerva clusters from Workbench as per the compute requirement.</p>
+<h3 id="running-queries-status">Running queries status<a class="headerlink" href="#running-queries-status" title="Permanent link">¶</a></h3>
+<p>Minerva usage statistics dashboard
+Query status, statistics</p>
+<h3 id="list-of-clusters">List of Clusters<a class="headerlink" href="#list-of-clusters" title="Permanent link">¶</a></h3>
+<p>List of Minerva Clusters added to the gateway. </p>
+<h3 id="managing-clusters">Managing Clusters<a class="headerlink" href="#managing-clusters" title="Permanent link">¶</a></h3>
+<p>You can add or delete clusters as per the query workload.
+How to do that, Workbench??</p>
+<p>The resources may be maintained within the DataOS environment and made available by a cloud service provider. The complexity of managing cluster performance to meet business requirements is complex. You want best-in-class performance to meet the short and long-running, interactive workloads while reducing and controlling costs.</p>
+<h2 id="cluster-usage-status">Cluster usage status<a class="headerlink" href="#cluster-usage-status" title="Permanent link">¶</a></h2>
+<h2 id="routingpolicy">RoutingPolicy<a class="headerlink" href="#routingpolicy" title="Permanent link">¶</a></h2>
+<p>RoutingPolicy determines the criteria for a cluster to be qualified for a query. The default RoutingPolicy is RANDOM, which means any cluster can be chosen randomly to execute the query.
+- if it maintains a queue
+- As per query, load</p>
+<p>The routing of requests can be controlled by implementing RoutingRule.</p>
+<h3 id="adding-your-own-rules">Adding your own rules<a class="headerlink" href="#adding-your-own-rules" title="Permanent link">¶</a></h3>
+<p>By default, it has location-based, random, and static routing rules.</p>
+<h2 id="policies-around-cluster-access">Policies around cluster access<a class="headerlink" href="#policies-around-cluster-access" title="Permanent link">¶</a></h2>
+<p>As per the access policy, the gateway will forward the query to the assigned clusters and continue the entire query process.</p>
+<p>DataGateway is a service that sits between clients and Minerva clusters. It is essentially an intelligent HTTP proxy server that is an abstraction layer on top of the Minerva clusters that handles the following actions:</p>
+<ol>
+<li>Parse incoming SQL statements to get requested datasets</li>
+<li>Manage data access policy to limit users' data access by checking against the SQL results.</li>
+<li>Manage users' cluster access.</li>
+<li>Redirect users' queries to the authorized clusters.</li>
+<li>Inform users about the errors whenever the query is rejected, or exceptions from clusters are encountered.</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../tuneminerva/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Minerva Cluster Tuning
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../tutorials/skewandkurtosis/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Skew and Kurtosis
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

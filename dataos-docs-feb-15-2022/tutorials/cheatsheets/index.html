@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Markdown cheat-sheet - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#markdown-cheat-sheet">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Markdown cheat-sheet
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#smart-symbols">
+    Smart symbols
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-highlights">
+    Inline highlights
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#details">
+    Details
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabs">
+    Tabs
+  </a>
+<nav aria-label="Tabs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-tab">
+    Example Tab
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-tab-breaks">
+    Example Tab Breaks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tasklist">
+    Tasklist
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete">
+    Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscript">
+    Subscript
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headers">
+    Headers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emphasis">
+    Emphasis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+    Lists
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#links">
+    Links
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#images">
+    Images
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-and-syntax-highlighting">
+    Code and Syntax Highlighting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tables">
+    Tables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blockquotes">
+    Blockquotes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-html">
+    Inline HTML
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#horizontal-rule">
+    Horizontal Rule
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#line-breaks">
+    Line Breaks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#youtube-videos">
+    Youtube videos
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="markdown-cheat-sheet">Markdown cheat-sheet<a class="headerlink" href="#markdown-cheat-sheet" title="Permanent link">¶</a></h1>
+<ul>
+<li><a href="https://www.markdownguide.org/">The Markdown Guide</a></li>
+<li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown (3 minute read)</a></li>
+</ul>
+<h2 id="smart-symbols">Smart symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">¶</a></h2>
+<p><div class="highlight"><pre><span></span><code>(tm) (c) (r)  c/o    +/-    
+--&gt; &lt;-- &lt;--&gt; =/=    
+1/4 1st 2nd
+</code></pre></div>
+™ © ®  ℅    ±  <br/>
+→ ← ↔ ≠  <br/>
+¼ 1<sup>st</sup> 2<sup>nd</sup></p>
+<h2 id="inline-highlights">Inline highlights<a class="headerlink" href="#inline-highlights" title="Permanent link">¶</a></h2>
+<p><div class="highlight"><pre><span></span><code>Here is some code: `#!py3 import pymdownx; pymdownx.__version__`. 
+
+The mock shebang will be treated like text here: ` #!js var test = 0; `.
+</code></pre></div>
+Here is some code: <code class="highlight"><span class="kn">import</span> <span class="nn">pymdownx</span><span class="p">;</span> <span class="n">pymdownx</span><span class="o">.</span><span class="n">__version__</span></code>.</p>
+<p>The mock shebang will be treated like text here: <code>#!js var test = 0;</code>.</p>
+<h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">¶</a></h2>
+<p>Details must contain a blank line before they start. Use ??? to start a details block or ???+ if you want to start a details block whose default state is 'open'. Follow the start of the block with an optional class or classes (separated with spaces) and the summary contained in quotes. Content is placed below the header and must be indented.</p>
+<div class="highlight"><pre><span></span><code>???+ note "Open styled details"
+
+    ??? danger "Nested details!"
+        And more content again.
+</code></pre></div>
+<details class="note" open="open"><summary>Open styled details</summary><details class="danger"><summary>Nested details!</summary><p>And more content again.</p>
+</details>
+</details>
+<h2 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">¶</a></h2>
+<h3 id="example-tab">Example Tab<a class="headerlink" href="#example-tab" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>=== "Tab 1"
+    Markdown **content**.
+
+    Multiple paragraphs.
+
+=== "Tab 2"
+    More Markdown **content**.
+
+    - list item a
+    - list item b
+</code></pre></div>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Tab 1</label><div class="tabbed-content">
+<p>Markdown <strong>content</strong>.</p>
+<p>Multiple paragraphs.</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">Tab 2</label><div class="tabbed-content">
+<p>More Markdown <strong>content</strong>.</p>
+<ul>
+<li>list item a</li>
+<li>list item b</li>
+</ul>
+</div>
+</input></input></div>
+<hr/>
+<h3 id="example-tab-breaks">Example Tab Breaks<a class="headerlink" href="#example-tab-breaks" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>=== "Tab 1"
+    Markdown **content**.
+
+    Multiple paragraphs.
+
+=== "Tab 2"
+    More Markdown **content**.
+
+    - list item a
+    - list item b
+
+===! "Tab A"
+    Different tab set.
+
+=== "Tab B"
+    ```
+    More content.
+    ```
+</code></pre></div>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><label for="__tabbed_2_1">Tab 1</label><div class="tabbed-content">
+<p>Markdown <strong>content</strong>.</p>
+<p>Multiple paragraphs.</p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio"><label for="__tabbed_2_2">Tab 2</label><div class="tabbed-content">
+<p>More Markdown <strong>content</strong>.</p>
+<ul>
+<li>list item a</li>
+<li>list item b</li>
+</ul>
+</div>
+</input></input></div>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><label for="__tabbed_3_1">Tab A</label><div class="tabbed-content">
+<p>Different tab set.</p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio"><label for="__tabbed_3_2">Tab B</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>More content.
+</code></pre></div>
+</div>
+</input></input></div>
+<h2 id="tasklist">Tasklist<a class="headerlink" href="#tasklist" title="Permanent link">¶</a></h2>
+<p>Simply start each list item with a square bracket pair containing either a space (an unchecked item) or a x (a checked item).</p>
+<div class="highlight"><pre><span></span><code>Dummy hierarchical task list 
+
+- [X] item 1
+    * [X] item A
+    * [ ] item B
+        more text
+        + [x] item a
+        + [ ] item b
+        + [x] item c
+    * [X] item C
+- [ ] item 2
+- [ ] item 3
+</code></pre></div>
+<p>Dummy hierarchical task list </p>
+<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item 1<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item A</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item B
+    more text<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item a</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item b</input></li>
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item c</input></li>
+</ul>
+</input></li>
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item C</input></li>
+</ul>
+</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item 2</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"/> item 3</li>
+</ul>
+<h2 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">¶</a></h2>
+<p>To wrap content in a delete tag, simply surround the text with double ~.<br/>
+<div class="highlight"><pre><span></span><code>~~Delete me~~
+</code></pre></div>
+<del>Delete me</del></p>
+<h2 id="subscript">Subscript<a class="headerlink" href="#subscript" title="Permanent link">¶</a></h2>
+<p>To denote a subscript, you can surround the desired content in single ~.
+<div class="highlight"><pre><span></span><code>CH~3~CH~2~OH
+
+text~a\ subscript~
+</code></pre></div>
+CH<sub>3</sub>CH<sub>2</sub>OH</p>
+<p>text<sub>a subscript</sub></p>
+<h2 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+</code></pre></div>
+<h2 id="emphasis">Emphasis<a class="headerlink" href="#emphasis" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+</code></pre></div>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>1. First ordered list item
+2. Another item
+  * Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+  1. Ordered sub-list
+4. And another item.  
+
+   Some text that should be aligned with the above item.
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+</code></pre></div>
+<ol>
+<li>First ordered list item</li>
+<li>Another item</li>
+<li>Unordered sub-list. </li>
+<li>Actual numbers don't matter, just that it's a number</li>
+<li>Ordered sub-list</li>
+<li>And another item.  </li>
+</ol>
+<p>Some text that should be aligned with the above item.</p>
+<ul>
+<li>Unordered list can use asterisks</li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">¶</a></h2>
+<p>There are two ways to create links.</p>
+<div class="highlight"><pre><span></span><code>[I'm an inline-style link](https://www.google.com)
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself][]
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+</code></pre></div>
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+<p><a href="https://www.mozilla.org">I'm a reference-style link</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+<p>Some text to show that the reference links can follow later.</p>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+</code></pre></div>
+<p>Here's our logo (hover to see the title text):</p>
+<p>Inline-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1"/></p>
+<p>Reference-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2"/></p>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting<a class="headerlink" href="#code-and-syntax-highlighting" title="Permanent link">¶</a></h2>
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and <em>Markdown Here</em> -- support syntax highlighting. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+<div class="highlight"><pre><span></span><code>Inline `code` has `back-ticks around` it.
+</code></pre></div>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.</p>
+<div class="highlight"><pre><span></span><code> ```javascript
+ var s = "JavaScript syntax highlighting";
+ alert(s);
+ ```
+
+ ```python
+ s = "Python syntax highlighting"
+ print s
+ ```
+
+ ```
+ No language indicated, so no syntax highlighting. 
+ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+ ```
+
+ Line highlights
+ ```css hl_lines="12 2 5"
+ html {
+    scroll-padding-top: 80px;
+ }
+ body {
+    font-size: 0.85rem;
+ }
+ .md-ellipsis{
+    position: relative; padding-right: 20px;
+ }
+ .md-header-nav__topic pre {
+    padding: 0; margin: 0; white-space: unset; 
+    position: absolute; right: 7px; top: -10px; color: white;
+ }
+ ```
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">"Python syntax highlighting"</span>
+<span class="nb">print</span> <span class="n">s</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>No language indicated, so no syntax highlighting in Markdown Here. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">html</span> <span class="p">{</span>
+<span class="hll">    <span class="n">scroll-padding-top</span><span class="p">:</span> <span class="mi">80</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+<span class="hll">    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.85</span><span class="kt">rem</span><span class="p">;</span>
+</span><span class="p">}</span>
+<span class="p">.</span><span class="nc">md-ellipsis</span><span class="p">{</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="k">padding-right</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">md-header-nav__topic</span> <span class="nt">pre</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="k">white-space</span><span class="p">:</span> <span class="kc">unset</span><span class="p">;</span> 
+<span class="hll">    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span> <span class="k">right</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span> <span class="k">top</span><span class="p">:</span> <span class="mi">-10</span><span class="kt">px</span><span class="p">;</span> <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span><span class="p">}</span>
+</code></pre></div>
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h2>
+<p>Tables aren't part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.</p>
+<div class="highlight"><pre><span></span><code>Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+</code></pre></div>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+</code></pre></div>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote. </p>
+</blockquote>
+<h2 id="inline-html">Inline HTML<a class="headerlink" href="#inline-html" title="Permanent link">¶</a></h2>
+<p>You can also use raw HTML in your Markdown, and it'll mostly work pretty well. </p>
+<div class="highlight"><pre><span></span><code>&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre></div>
+<dl>
+<dt>Definition list</dt>
+<dd>Is something people use sometimes.</dd>
+<dt>Markdown in HTML</dt>
+<dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+<h2 id="horizontal-rule">Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre></div>
+<p>Three or more...</p>
+<hr/>
+<p>Hyphens</p>
+<hr/>
+<p>Asterisks</p>
+<hr/>
+<p>Underscores</p>
+<h2 id="line-breaks">Line Breaks<a class="headerlink" href="#line-breaks" title="Permanent link">¶</a></h2>
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend. </p>
+<p>Here are some things to try out:</p>
+<div class="highlight"><pre><span></span><code>Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+</code></pre></div>
+<p>Here's a line for us to start with.</p>
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+<p>This line is also begins a separate paragraph, but...<br/>
+This line is only separated by a single newline, so it's a separate line in the <em>same paragraph</em>.</p>
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there's no need to use MD's two-space line breaks.)</p>
+<h2 id="youtube-videos">Youtube videos<a class="headerlink" href="#youtube-videos" title="Permanent link">¶</a></h2>
+<p>They can't be added directly but you can add an image with a link to the video like this:</p>
+<div class="highlight"><pre><span></span><code>&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
+</code></pre></div>
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+<div class="highlight"><pre><span></span><code>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+</code></pre></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

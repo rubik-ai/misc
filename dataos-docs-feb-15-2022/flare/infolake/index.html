@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Infolake - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Infolake
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1>Infolake</h1>
+<p>Why adopt MML?
+Challenges that MML can solve
+Key considerations for MML
+What all scenarios where you consider using MML
+Best Use case
+How MML works?
+    Compnents
+    How to set up MML</p>
+<p>The story flow of this article is (THIS SECTION IS FOR INTERNAL CONSUMPTION ONLY) </p>
+<p>What is preventing the usage of existing data platforms by business and non-technical users ?  </p>
+<p>What have we done in DataOS to make it usable by everyone? What did we introduce to abstract out the technical protocols and need for programming languages ?  </p>
+<p>How can users with even limited SQL skills make the most of DataOS ? </p>
+<p>In a data-driven business world, for many organisations, a state-of-the-art data and analytics platform is no longer an option but a necessity. These platforms act as a central repository for enterprise-wide data and empowers businesses to translate data into business value. Over the last decade, these organisations have invested a lot in building best data platforms but have often failed in achieving true value from their data at rapid pace. One of the primary reasons for this is that the business users always depended on Technical teams for data because the data platforms demand programming and niche technical expertise. </p>
+<p>While building DataOS, we had one core agenda in mind - it should be used intuitively by a wide range of users. This means DataOS should make it possible for all users to easily discover and analyze data within the platform, understand the context associated with data, such as column descriptions, history and lineage and derive insights from data with minimal dependencies on the data or IT team. </p>
+<p>Data processing made easy with DataOS </p>
+<p>Executing data processing jobs has remained a nightmare for data engineers and with DataOS we wanted to simplify this. To achieve this we have built our own data processing engine called ‘Rio’. DataOS® Rio allows data engineers to ingest both batch and stream data processing. Rio Flare is a library that simplifies writing and executing ETL jobs and is built on top of Apache Spark.  </p>
+<p>Typically when you use spark, in data processing, you need to write programs in a programming language like Python,Java or Scala. This requires users to have prior knowledge of one of these programming languages. In DataOS, we have abstracted out the programming interface and turned it into declarative. Flare allows you to declare your Transformation steps in simple YAML configuration files and then runs it on DataOS® managed Spark Cluster.  </p>
+<p>Example : For a data ingestion job users can simply declare the source system from where the data needs to be read, transformation logic in simple SQL syntax and final destination where the data needs to be written. DataOS Flare abstracts out all the complexities related to different storage system protocols and performs the job for you. </p>
+<p>Screenshot showing details of input, output and steps in a sample data ingestion flare job </p>
+<p>So, essentially, we have tried to take out programming languages as a necessary skill and made things easy by introducing SQL as the only required skills for users. Contrary to earlier, users can now work on Spark if they are equipped with SQL, which many users are comfortable with. </p>
+<p>Data ingestion made easy with DataOS </p>
+<p>One of the core pain points for data engineers during data ingestion is to ingest data from varied data storage systems. They need to learn and understand the underlying protocols of these systems and deploy these ingestion jobs as per the pre-configured protocols. Organisations these days, store data in multiple sources in varied formats. Now, imagine the time these data engineers spend on understandingRemember, we said that we have abstracted out the need for programming languages while writing data processing jobs, similarly we have abstracted out the concept of varied storage protocols for different storages. Let me explain it with an example.  </p>
+<p>Organisations store data in Redshift using it as DataWarehouse, BigQuery, S3 as blob storage or Snowflake. Now all of these storage systems have different storage protocols, as in how can we query data from these storage systems. What we have essentially done with DataOS is, we have thoroughly understood the underlying technologies and protocols behind these storage systems and created one standard SQL way for users, so that they can query and access data from multiple data source systems. In DataOS, we have made this possible by introducing DataOS ‘Depots’. </p>
+<p>More about DataOS Depots </p>
+<p>DataOS depots enable Data Engineers to write data ingestion jobs irrespective of the source data storage systems. Depots abstract out the challenge of accessing data stored across varied storage systems. Depots contain connection details about the data source and destination systems and the information about the type of data storage systems. Depots encapsulates the complexity and surfaces a simple dataset address and users can access their data using SQL. Backend protocols pertaining to data accessibility of that source system becomes immaterial now.  </p>
+<p>From an end user point of view, accessing a kafka topic or data from a big query table is one and the same. The back end technical protocols of these two will be abstracted and taken care of by DataOS depots. In the next section, let us briefly understand about SQL workbench that brings in immense data capabilities into DataOS. </p>
+<p>DataOS workbench </p>
+<p>DataOS Workbench is a SQL based query engine and allows data analysts to write complex SQL queries for managing, manipulating and analysing data in the database. Data analysts can use DataOS workbench to connect to multiple data sources and process SQL queries at rapid pace and scale. DataOS Rio(our inhouse data processing engine) handles these SQL queries to create tables or views. It is simple and easy to use.  </p>
+<p>Want to query your data but not proficient at writing long SQL queries? It is no longer a problem with DataOS. Business users can use SQL studio which is a visual query builder and build even complex queries visually via drag-and-drop even without writing queries. Users need to just select which data you want to get, apply necessary functions and aggregations to them, configure sorting and filtering, and that’s all.  All of these can be done using an intuitively built user interface (UI), and users won’t need to type even a single line of code. How cool ! </p>
+<p>Conclusion </p>
+<p>Nowadays, almost all data teams are overwhelmed with data requests. They spend sleepless nights trying to make disparate data sets talk to each other, building and maintaining data pipelines, solving data quality and accessibility issues all by themselves. DataOS is one platform that is designed to make the life of data teams easy. DataOS’s intuitive and extensive features encourage users, irrespective of their technical and programming abilities, to experiment with their data. This reduces dependency of business teams on Data teams and improves time to insight drastically. </p>
+<p>Along with many inbuilt features, DataOS also comes with a swift data processing engine and powerful workbench which require a minimal learning curve. Over the past 12 months, we’ve been working very closely with our beta customers to understand their data goals and showed them how DataOS can help them achieve data goals within 3-6 months. If you’d like to experience your data in a whole new way, manage it and extract value out of it at a rapid pace, email us at hi@tmdc.io or visit us at themoderndatacompany.com </p>
+<p>Discovery Calls with Potential Customers </p>
+<p>PRIMARY GOAL </p>
+<p>Gather information related to the customer’s data goals and data ecosystem so that we can come up with insights around their data needs and offer solutions. </p>
+<p>APPROACH </p>
+<p>Business Goals  -&gt;  Data Goals  -&gt;  Data Needs  -&gt;   Solutions  -&gt;  Capabilities enabled by DataOS  -&gt;      Features in DataOS </p>
+<p>The Business Goals are the CEO-level goals. </p>
+<p>The Data Goals are the CIO-level goals which when accomplished contribute to their Business Goals. </p>
+<p>The Data Needs are the insights that we need to figure out which when solved will help the customer accomplish their Data Goals. </p>
+<p>For the customer to consider our solution to the data Needs as valuable, the solution to the needs to either </p>
+<p>Meet the Data Needs in a way that is both considered as valuable (faster, cheaper, comprehensive) by the customer and is better than the alternatives, OR </p>
+<p>Make new Data aspirations possible, OR  </p>
+<p>BOTH </p>
+<p>Page Break</p>
+<p>QUESTIONS </p>
+<p>High-level Goals of the Customer </p>
+<p>What are some of your Business’s goals that you are trying to contribute to? </p>
+<p>So that we can understand their Business Goals. </p>
+<p>Some goals we have seen in enterprises </p>
+<p>Be prepared for Volatility - New ways of doing business – to adapt to changing market conditions – user behavior, competition, new entrants. </p>
+<p>Enhanced User Experience - understand them better – to retain customers </p>
+<p>Automation – business processes automation - to reduce costs and improve accuracy </p>
+<p>Real Time or near-real time insights – to react to critical events on-time. </p>
+<p>Course Correction </p>
+<p>What are the technology/data goals that you are  trying to achieve? </p>
+<p>So that we understand their Data Goals. </p>
+<p>Some goals we have seen in enterprises </p>
+<p>Infrastructure agility  </p>
+<p>Real-time insights </p>
+<p>Observability – data pipes and security &amp; governance </p>
+<p>Multi-cloud security </p>
+<p>Governance </p>
+<p>Insights democratization (Shifting power of data/insights from IT to Business users) </p>
+<p>Enable experimentation / fail fast </p>
+<p>Data freedom - ability to move data across org freely </p>
+<p>Inefficiencies with Current Situation </p>
+<p>What is the status quo way of achieving the Data goals? </p>
+<p>So that we understand their current data ecosystem and how we can position ourselves to be perceived as a better solution. </p>
+<p>What are the known shortcomings in the status quo? With few follow up “5 Why” questions. </p>
+<p>So that we can understand what they consider valuable. </p>
+<p>From a data ecosystem readiness point of view, how much time/effort/cost did/would it take:  </p>
+<p>to achieve GDPR compliance? </p>
+<p>to integrate an acquired company/brand? </p>
+<p>to get a 360 view of your customers? </p>
+<p>to move data to an external system without getting into data privacy issues? </p>
+<p>to handle peak season data traffic? </p>
+<p>to resolve data quality issues?   </p>
+<p>to support near real time use cases?  </p>
+<p>to implement governance on Data lake? </p>
+<p>to solve data discoverability issues for all the data assets stored in different systems? </p>
+<p>to monitor data pipelines? </p>
+<p>to define and manage SLAs (quality, availability, performance, security, and cost-effectiveness)? </p>
+<p>to manage incidents related to data movement and data management and alert stakeholders? </p>
+<p>to create compute clusters on demand for varied data processing/querying needs? </p>
+<p>to version control data artifacts? </p>
+<p>to deploy, track and monitor ML models in production? </p>
+<p>to build consensus on definition and calculation of key business metrics? </p>
+<p>To evolve data partitioning strategy on the fly to improve query performances of data consumers? </p>
+<p>For each of the above questions, how would the responses be viewed as in your organization - ? </p>
+<p>Unacceptable </p>
+<p>Should be improved </p>
+<p>Acceptable </p>
+<p>Importance of the problem to the customer </p>
+<p>What alternatives did you consider? </p>
+<p>So that we know this is an important goal for them relative to their other goals. </p>
+<p>Did you try some of the alternative solutions? </p>
+<p>So that we know they’ll put some money/time/effort in trying out our product. </p>
+<p>Why did the alternative solutions not satisfy your needs? </p>
+<p>So that we can understand what they consider valuable – faster, cheaper, comprehensive. </p>
+<p>How did you find out about these alternatives? </p>
+<p>So that we know how to reach our potential customers. </p>
+<p>Customer’s willingness and ability to pay </p>
+<p>How do you see budget getting allocated to solving these problems – new spend or able to retire existing spend? </p>
+<p>So that we understand there will be able to pay for the solution as per our expectations. </p>
+<p>Follow Up </p>
+<p>Who else in your organization should we talk to so we better understand how we can solve your needs? </p>
+<p>So that we get more calls and better understanding of their needs. </p>
+<p>How does the approval process work and who are involved in the process? </p>
+<p>So that we know who else need to be involved in the Sales process. </p>
+<p>Who else in your organization should we talk to for follow up questions that came out of this conversation? </p>
+<p>So that we get clarifications on unanswered questions. </p>
+<p>Page Break</p>
+<p>PRODUCT – DataOS </p>
+<p>DataOS (Data Operating System) is a comprehensive data platform that abstracts out the entire complexities of data engineering by productizing it so that as a business, you can focus on driving value from data instead of managing data. </p>
+<p>Status quo at several companies is that they are spending lot of time and money on data wrangling than on how to use the data. </p>
+<p>DataOS provides entire data management in one product – everything from data ingestion, data governance, data quality, operationalizing data, data discoverability. </p>
+<p>Current alternatives to get the capabilities provided by DataOS are very suboptimal. The most common available alternative is: </p>
+<p>Custom build data ecosystem to power the data needs from ground-up by going to an SI (Accenture, Deloitte, etc.), taking a reference architecture, picking multiple vendors of point solutions for ingestion, catalog, quality, governance, processing. </p>
+<p>These tools are built on different and old stacks that limits their capabilities and integration with other tools. </p>
+<p>Sum of all these parts results in a very rigid architecture. </p>
+<p>Inefficiencies experienced </p>
+<p>Integrate Snowflake on top of existinf infrastructure would take a year. </p>
+<p>Moving away from Snowflake to Redshift would take 2 or 3 quarters. </p>
+<p>Data movement from Teradata on-prem to Teradata Cloud takes 2 years. </p>
+<p>Spend millions of dollars in license fees for Snowflake, PowerBI, Alteryx, etc. and not able to take advantage of the functionalities of those products. </p>
+<p>Creating each BI report/dashboard takes X weeks. </p>
+<p>The main gap in the market is that the customers of the companies are expecting experiences that can be provided only with an agile and modern data ecosystem but companies do not have a way to achieve it with the status quo and available alternatives. </p>
+<p>The rigidity of the data ecosystem and infrastructure that hinders the companies to adapt to dynamic business environment is the key problem that is solved by DataOS. </p>
+<p>DataOS gives enterprises an agile data infrastructure and future-proofs their infrastructure for next 5-10 years. </p>
+<p>DataOS </p>
+<p>CapabilitiesFeatures </p>
+<p>FeaturesCapabilities </p>
+<p>Data Management </p>
+<p>Data interface to access data that is residing in different systems in the organization – relational, non-relational, streaming, and object data stores. (Depots) </p>
+<p>Simplification of Data engineering effort by providing re-usable and version-controlled constructs. (Declarative Artifacts) </p>
+<p>Flexible data warehousing capability by providing ACID-compliant Data Lake based on Open Data formats. (Icebase) </p>
+<p>Data Processing </p>
+<p>Ability to process (transform, enrich) data with different volume, velocity needs – stream, batch, stateful &amp; stateless computation. </p>
+<p>Orchestration engine to deploy, monitor, schedule, or trigger sophisticated data pipelines. (Workflows) </p>
+<p>Data Exploration </p>
+<p>Holistic view of all the data in the organization, their relationships and their usage. (Datanet) </p>
+<p>Ability to query data from across multiple databases using single SQL interface. (Workbench) </p>
+<p>Ability for users with no/minimal SQL expertise to access datasets through GUI. (Workbench - Studio) </p>
+<p>Ability to create on-demand compute clusters for recurring and critical queries for applications such as Dashboards. </p>
+<p>Data Activation </p>
+<p>Sending data to external systems (such as Salesforce) to achieve reverse-ETL. (Syndication) </p>
+<p>Sharing of datasets to enable secure access from external applications using UDLs (Universal Data Link). </p>
+<p>Ability to create data-powered applications end-to-end including GUI, processing, storage, dashboard. </p>
+<p>Ability to create REST APIs on demand (conceptually similar to GraphQL), and a runtime for fulfilling request on these APIs on the datasets stored in DataOS. </p>
+<p>Ability to define and track business KPIs in a consistent manner through MML paradigm; common vocabulary for entities and relationships (Model), map them to data sources (Map) and get data (Load). </p>
+<p>Data Governance </p>
+<p>Ability to govern and secure data at highly granular level through ABAC (Attribute-based access control); such as row-level redaction and column-level masking. </p>
+<p>Visibility for InfoSec team to sensitive data (such as PII) being accessed across the organization to enable data privacy compliance. </p>
+<p>APPENDIX </p>
+<p>Tips from the book: THE MOM TEST </p>
+<p>Tips: </p>
+<p>Talk about their life instead of your idea. </p>
+<p>Ask about specifics in the past instead of generics or opinions about the future. </p>
+<p>Talk less and listen more. </p>
+<p>Rules of Thumb when framing questions: </p>
+<p>Opinions are worthless. </p>
+<p>Anything involving the future is an over-optimistic lie. </p>
+<p>People will lie to you if they think it’s what you want to hear. </p>
+<p>You're shooting blind until you understand their goals. </p>
+<p>Watching someone do a task will show you where the problems and inefficiencies really are, not where the customer thinks they are. </p>
+<p>If they haven't looked for ways of solving it already, they're not going to look for (or buy) yours. </p>
+<p>People stop lying when you ask them for money. </p>
+<p>While it’s rare for someone to tell you precisely what they’ll pay you, they’ll often show you what it’s worth to them. </p>
+<p>In a B2B context, know where the money comes from </p>
+<p>Whose budget the purchase will come from </p>
+<p>Who else within their company holds the power to torpedo the deal. </p>
+<p>People want to help you. Give them an excuse to do so. </p>
+<p>"Who else should I talk to?" </p>
+<p>"Is there anything else I should have asked?" </p>
+<p>Hero Section </p>
+<p>The Modern DataOS Platform  </p>
+<p>Option A:  The connective tissue for ALL your data infrastructure </p>
+<p>Option B:  A fully-integrated platform that allows you to programmatically manage and operationalize all your legacy and cloud data. </p>
+<p>Option C:  The connective tissue for your data, ML and analytics infrastructure </p>
+<p>Option D:  An operating system to power your entire data lifecycle. </p>
+<p>Option E : DataOS is the operating system for a new generation of data,ML and analytics infrastructure.  </p>
+<p>DataOS is the operating system powering a new generation of data and analytics infrastructure. It is the connective tissue between your legacy and cloud data sources delivering quality, governed, secure and reliable data in real-time. Democratize and simplify access to data and insights for technical and business users in your team with DataOS. </p>
+<p>DataOS policies allow organizations to authorize users, employees and third parties to access company data in a manner that meets security, privacy and compliance requirements.</p>
+<p>Access Policy  </p>
+<p>Access policy is a security measure which is put in place to regulate the individuals that can view, use, or have access to a restricted DataOS environment/resource.A This is implemented by tags. For example a user with a tag 'operator' can access secrets or specific Depots to connect to data. </p>
+<p>Data Policies  </p>
+<p>These policies are global policies available in the system which contains all the column level policy. Using these policies, you can:
+Mask the data or 
+Filter the data.  </p>
+<p>Masking and filtering strategies can be defined in the YAML files. For example, PII data can be shown with appropriate mask, replacing with "####" string or with some hash function. You can filter the data based on tags such as some users can not see ' Florida' region data.  </p>
+<p>The following examples show what the masked data might look like after the masking policy is applied.
+Type     Original Value   Masked Value
+Email ID abc.ef@gmail.com - bkfgohrnrtseqq85@bkgiplpsrhsll16.org
+SSN 987654321 867-92-3415
+Credit card number 8671 9211 3415 4546 #### #### #### ####</p>
+<p>A data catalog is an organized inventory of data assets in the organization. It uses metadata to help organizations manage their data. This metadata helps in data discovery and governance. </p>
+<p>CTA: Schedule a Demo </p>
+<p>&lt; Infographic here&gt;  </p>
+<p>Business Value from DataOS  </p>
+<p>Benefit 1:   Secure Data Sharing  </p>
+<p>Benefit 2:  Data fit for purpose  </p>
+<p>Benefit 3:   Data Democratization </p>
+<p>Benefit 4:   Trusted and Reliable Data  </p>
+<p>Benefit 5:   Built in governance and security </p>
+<p>Benefit 6:   Automation and Speed  </p>
+<p>DataOS Capabilities  </p>
+<p>One Platform for all your data activities  </p>
+<p>Data Management </p>
+<p>The DataOS seamlessly connects to all your source and sink systems and transform and curate data with our model-based low-code declarative artifacts. ACID-compliant data lake enables teams to store structured, unstructured and streaming data. Out-of-the-box data quality and profiling functionality lets you get quality and trusted data without additional processing. Leverage our observability principles to create robust alerts across the data lifecycle.  </p>
+<p>Data Exploration - </p>
+<p>DataOS’s Datanet creates a connective tissue between all your data systems continuously adding usage-based intelligence to your data. Easily Discover, search and find trusted and context-aware data. Understand the journey, relationships and impact of your datasets and make decisions with confidence. DataOS also has powerful workbench that lets you query datasets with simple SQL queries.   </p>
+<p>Data Activation </p>
+<p>Activate your data and share it across your enterprise. DataOS lets you create customized reports on any datasets in minutes, share and collaborate on them securely. Build trigger alerts and notifications to 10+ destinations including ServiceNow, Jira, Pager Duty, Slack, MS teams, Pager Duty etc. Consume your shared data from SaaS systems like salesforce, zendesk, google ads etc </p>
+<p>Data Products </p>
+<p>Build and launch new data products faster.  DataOS handles all the infrastructure needed  - Run,host,store,process,sync,serve  to build your data application so teams can focus on innvoation. </p>
+<p>Governance &amp; Security </p>
+<p>DataOS’s Tag-based governance enables flexible and granular policy creation that gives teams an automated and scalable way to ensure governance and compliance for data within your ecosystem. Attribute-based access control future-proofs your org and lets it adapts to changing and new compliance regulations. Easy-to-create access and Data policies let you control, track and audit access to data. Row-level filtering and column masking give you granular control of what data authenticated users can access. Advanced primitives like data masking, data abstraction and differential privacy ensure your teams are working with trusted data at all times.  </p>
+<p>Data Sharing </p>
+<p>Share data easily across your business ecosystem without copying or moving data. DataOS’s best in class governance enables you to control access in a secured and auditable environment. Share data and collaborate with customers, internal and external partners to unlock newer and richer insights. </p>
+<p>Data Modeling </p>
+<p>DataOS’s foundational MML(Map-ModelModel-Map-Load) architecture brings a declarative model-first approach to pipeline creation. It abstracts away the complexity of pipeline building.  MML makes it easy to build and manage data pipelines helping data engineering teams to streamline and simplify their ETL processes.  </p>
+<p>Principles of DataOS </p>
+<p>Model First Engg                                   </p>
+<p>Abstract away the complexity of data engineering with our model-based approach to building pipelines. Give the control back to business decision makers to get to their insights – faster and easily.  </p>
+<p>DataOps-friendly                      </p>
+<p>Cloud native and agnostic and agile-friendly adopting the principles of DevOps and DataOps. </p>
+<p>Observability </p>
+<p>Data observability, with visibility into any anomalies encountered in permissions, roles, policies, or movement of data </p>
+<p>Use cases </p>
+<p>Data Engineering - Automate and simplify Data Engineering tasks thru MML (Map-Model-Load).  With our declarative model-first pipeline creation, engineering teams can streamline their ETL processes leaving them free to focus on value-add features.  </p>
+<p>Data Governance - Deliver governance and security for all your data from a single, centralized platform. Future-proof your enterprise for governance and compliance requirements with Attribute-based access control. Easy setup of policies to control, observe and audit who and what data they are accessing.  Build confidence in your insights by delivering trusted data to your teams.  </p>
+<p>Data Discovery  -   Discover data, understand the lineage, relationships and impact of your data. Remove barriers to data access for your business decision makers. Empower you technical and business teams with quality and contextual data  </p>
+<p>Data sharing &amp; collaboration – Collaborate and share data with your internal systems and stakeholders and your external partner ecosystem and customers in a secure, governed and auditable fashion.  Share datasets in real time without creating copies or moving it. Unearth richer insights and unlock powerful new use cases by sharing your data within your enterprise and your external partner ecosystem and customers.  </p>
+<p>Data Observability  </p>
+<p>Complete data observability into all your data activities from production to consumption of data, to access and sharing of data including events, metrics and logs  </p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

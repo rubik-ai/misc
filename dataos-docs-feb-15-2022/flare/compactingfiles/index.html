@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Merging Small Files - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#merging-small-files">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Merging Small Files
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Merging Small Files
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Merging Small Files
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solution-approach">
+    Solution approach
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-details">
+    Implementation details
+  </a>
+<nav aria-label="Implementation details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-manifests">
+    Rewrite manifests
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expire-snapshots">
+    Expire snapshots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-orphan-files">
+    Remove orphan files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-dataset">
+    Rewrite dataset
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#outcomes">
+    Outcomes
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solution-approach">
+    Solution approach
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-details">
+    Implementation details
+  </a>
+<nav aria-label="Implementation details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-manifests">
+    Rewrite manifests
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expire-snapshots">
+    Expire snapshots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-orphan-files">
+    Remove orphan files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-dataset">
+    Rewrite dataset
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#outcomes">
+    Outcomes
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="merging-small-files">Merging Small Files<a class="headerlink" href="#merging-small-files" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>This use case describes Flare job to efficiently perform metadata and data compaction on Iceberg tables. To write values from streaming query to Iceberg table, these queries can create new table versions quickly, which creates lots of table metadata to track those versions. The amount of data written in a micro batch is typically small, which can cause the table metadata to track lots of small files. You can write a Flare job for compacting small files into larger files to reduce the metadata overhead and runtime file open cost. While running at petabyte scale, it is important to increase storage as well as compute efficiency. </p>
+<h2 id="solution-approach">Solution approach<a class="headerlink" href="#solution-approach" title="Permanent link">¶</a></h2>
+<p>Iceberg tracks each data file in a table. More data files leads to more metadata stored in manifest files, and small data files causes an unnecessary amount of metadata and less efficient queries.</p>
+<p>This example Flare job will compact data/metadata files in Iceberg  with the <em>rewriteDataFiles</em> action. </p>
+<h2 id="implementation-details">Implementation details<a class="headerlink" href="#implementation-details" title="Permanent link">¶</a></h2>
+<p>The follwoing actions are implemented in the re-write scenario. A workflow is defined with a job that compacts NY taxi data.</p>
+<p>You can configure YAML for the following actions. </p>
+<h3 id="rewrite-manifests">Rewrite manifests<a class="headerlink" href="#rewrite-manifests" title="Permanent link">¶</a></h3>
+<p>Iceberg may write the new snapshot with a “fast” append that does not automatically compact manifests which could lead to  lots of small manifest files. Manifests can be rewritten to optimize queries and to compact. </p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+  <span class="nt">dag</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi01</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+      <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+      <span class="nt">flare</span><span class="p">:</span>
+        <span class="nt">job</span><span class="p">:</span>
+          <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">inputs</span><span class="p">:</span>
+           <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi</span>
+             <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01/ny_taxi_01?acl=r</span>
+          <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INFO</span>
+          <span class="nt">actions</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rewrite_manifest</span>
+                <span class="nt">options</span><span class="p">:</span>
+                   <span class="nt">specId</span><span class="p">:</span> <span class="s">""</span>           <span class="c1"># optional</span>
+                   <span class="nt">stagingLocation</span><span class="p">:</span> <span class="s">""</span>  <span class="c1"># optional</span>
+                   <span class="nt">useCaching</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>    <span class="c1"># optional</span>
+          <span class="nt">outputs</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+              <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01?acl=rw</span>
+</code></pre></div>
+<h3 id="expire-snapshots">Expire snapshots<a class="headerlink" href="#expire-snapshots" title="Permanent link">¶</a></h3>
+<p>In Iceberg, each micro-batch written to a table produces a new snapshot, which are tracked in table metadata. Snapshots accumulate quickly with frequent commits, so it is highly recommended that tables written by streaming queries are regularly maintained. This action will remove old snapshots and related data files that are no longer needed. </p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+  <span class="nt">dag</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi01</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+      <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+      <span class="nt">flare</span><span class="p">:</span>
+        <span class="nt">job</span><span class="p">:</span>
+          <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">inputs</span><span class="p">:</span>
+           <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi</span>
+             <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01/ny_taxi_01?acl=r</span>
+          <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INFO</span>
+          <span class="nt">actions</span><span class="p">:</span>
+             <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">expire_snapshots</span>
+               <span class="nt">options</span><span class="p">:</span>
+                 <span class="nt">expireOlderThan</span><span class="p">:</span> <span class="s">"1627500040443"</span>   <span class="c1"># expire all snapshots older than this timestamp millis.</span>
+                 <span class="nt">expireSnapshotId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1343444444</span>       <span class="c1"># specific snapshot to expire.</span>
+                 <span class="nt">retainLast</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>                   <span class="c1"># retail most recent 10 snapshts.</span>
+                 <span class="nt">streamDeleteResults</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span> 
+                 <span class="c1">#By default, all files to delete are brought to the driver at once which may be an issue with very long file lists. Set this to true to use toLocalIterator if you are running into memory issues when collecting the list of files to be deleted.</span>
+          <span class="nt">outputs</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+              <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01?acl=rw</span>
+</code></pre></div>
+<h3 id="remove-orphan-files">Remove orphan files<a class="headerlink" href="#remove-orphan-files" title="Permanent link">¶</a></h3>
+<p>This action will remove files which are not referenced in any metadata files of an Iceberg table and can thus be considered “orphaned”.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+  <span class="nt">dag</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi01</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+      <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+      <span class="nt">flare</span><span class="p">:</span>
+        <span class="nt">job</span><span class="p">:</span>
+          <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">inputs</span><span class="p">:</span>
+           <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi</span>
+             <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01/ny_taxi_01?acl=r</span>
+          <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INFO</span>
+          <span class="nt">actions</span><span class="p">:</span>
+             <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">remove_orphans</span>
+               <span class="nt">options</span><span class="p">:</span>
+                  <span class="nt">olderThan</span><span class="p">:</span> <span class="s">"1627500040443"</span>      <span class="c1"># older than this time.</span>
+                  <span class="nt">location</span><span class="p">:</span> <span class="s">""</span>                    <span class="c1"># Removes orphan files in the given location.</span>
+          <span class="nt">outputs</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+              <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01?acl=rw</span>
+</code></pre></div>
+<h3 id="rewrite-dataset">Rewrite dataset<a class="headerlink" href="#rewrite-dataset" title="Permanent link">¶</a></h3>
+<p>This action will rewrite and compact the generated small data files.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+  <span class="nt">dag</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">com-nytaxi01</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Compression NyTaxi</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job Compress NyTaxi data</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Compression</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NyTaxi</span>
+      <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+      <span class="nt">flare</span><span class="p">:</span>
+        <span class="nt">job</span><span class="p">:</span>
+          <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">inputs</span><span class="p">:</span>
+           <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi</span>
+             <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01/ny_taxi_01?acl=r</span>
+          <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INFO</span>
+          <span class="nt">actions</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rewrite_dataset</span>
+                <span class="nt">options</span><span class="p">:</span>
+                   <span class="nt">filter</span><span class="p">:</span> <span class="s">"fiter</span><span class="nv"> </span><span class="s">expression</span><span class="nv"> </span><span class="s">here"</span>
+                   <span class="nt">splitOpenFileCost</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3434343</span>   <span class="c1"># Specify the minimum file size to count to pack into one "bin"</span>
+                   <span class="nt">splitLookback</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+                   <span class="nt">targetSizeInBytes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">54545</span>     <span class="c1"># Specify the target rewrite data file size in bytes</span>
+                   <span class="nt">outputSpecId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>              
+                   <span class="c1"># Pass a PartitionSpec id to specify which PartitionSpec should be used in DataFile rewrite</span>
+                <span class="-Error">  </span><span class="nt">caseSensitive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>          <span class="c1"># Is it case sensitive</span>
+          <span class="nt">outputs</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+              <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:raw01?acl=rw</span>
+</code></pre></div>
+<h2 id="outcomes">Outcomes<a class="headerlink" href="#outcomes" title="Permanent link">¶</a></h2>
+<p>if there are  many files in some partition or non partitioned data,  it will merge all small files into a large one.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../datareplay/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Data Replay
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../concurrent/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Concurrent Writes
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

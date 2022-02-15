@@ -1,0 +1,2154 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Reference - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#dataos-command-line-interface">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Reference
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Reference
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structure-of-the-dataos-cli-command">
+    Structure of the DataOS CLI Command
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-dataos-cli-commands">
+    List of DataOS CLI Commands
+  </a>
+<nav aria-label="List of DataOS CLI Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apply">
+    Apply
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#completion">
+    Completion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context">
+    Context
+  </a>
+<nav aria-label="Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-list">
+    Context List
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-delete">
+    Context Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-select">
+    Context Select
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete">
+    Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet">
+    Datanet
+  </a>
+<nav aria-label="Datanet" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenet-create">
+    Datenet Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset">
+    Datanet Dataset
+  </a>
+<nav aria-label="Datanet Dataset" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-create">
+    Datanet Dataset Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-get">
+    Datanet Dataset Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-versions">
+    Datanet Dataset Versions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-get">
+    Datanet Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-heartbeat">
+    Datanet Heartbeat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-lifecyle">
+    Datanet Lifecyle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-map-stack-run">
+    Datanet Map-Stack-Run
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop">
+    Develop
+  </a>
+<nav aria-label="Develop" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-create">
+    Develop Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-get">
+    Develop Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-port-forward">
+    Develop Port-Forward
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-stop">
+    Develop Stop
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get">
+    Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get-runtime">
+    Get Runtime
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#health">
+    Health
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help">
+    Help
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#init">
+    Init
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log">
+    Log
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+    Login
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance">
+    Maintenance
+  </a>
+<nav aria-label="Maintenance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance-collect-garbage">
+    Maintenance Collect-garbage
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate">
+    Operate
+  </a>
+<nav aria-label="Operate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-apply">
+    Operate Apply
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-chart-export">
+    Operate Chart-Export
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-get-secret">
+    Operate Get-Secret
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-git">
+    Operate Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-install">
+    Operate Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-ping">
+    Operate Ping
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-upgrade">
+    Operate Upgrade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-view">
+    Operate View
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tui">
+    TUI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user">
+    User
+  </a>
+<nav aria-label="User" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-apikey">
+    User Apikey
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-delete">
+    User Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-get">
+    User Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag">
+    User Tag
+  </a>
+<nav aria-label="User Tag" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag-add">
+    User Tag Add
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag-delete">
+    User Tag Delete
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version">
+    Version
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view">
+    View
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace">
+    Workspace
+  </a>
+<nav aria-label="Workspace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-create">
+    Workspace Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-delete">
+    Workspace Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-get">
+    Workspace Get
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structure-of-the-dataos-cli-command">
+    Structure of the DataOS CLI Command
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-dataos-cli-commands">
+    List of DataOS CLI Commands
+  </a>
+<nav aria-label="List of DataOS CLI Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apply">
+    Apply
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#completion">
+    Completion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context">
+    Context
+  </a>
+<nav aria-label="Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-list">
+    Context List
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-delete">
+    Context Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context-select">
+    Context Select
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete">
+    Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet">
+    Datanet
+  </a>
+<nav aria-label="Datanet" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datenet-create">
+    Datenet Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset">
+    Datanet Dataset
+  </a>
+<nav aria-label="Datanet Dataset" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-create">
+    Datanet Dataset Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-get">
+    Datanet Dataset Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-dataset-versions">
+    Datanet Dataset Versions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-get">
+    Datanet Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-heartbeat">
+    Datanet Heartbeat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-lifecyle">
+    Datanet Lifecyle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datanet-map-stack-run">
+    Datanet Map-Stack-Run
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop">
+    Develop
+  </a>
+<nav aria-label="Develop" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-create">
+    Develop Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-get">
+    Develop Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-port-forward">
+    Develop Port-Forward
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop-stop">
+    Develop Stop
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get">
+    Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get-runtime">
+    Get Runtime
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#health">
+    Health
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help">
+    Help
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#init">
+    Init
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log">
+    Log
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+    Login
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance">
+    Maintenance
+  </a>
+<nav aria-label="Maintenance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance-collect-garbage">
+    Maintenance Collect-garbage
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate">
+    Operate
+  </a>
+<nav aria-label="Operate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-apply">
+    Operate Apply
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-chart-export">
+    Operate Chart-Export
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-get-secret">
+    Operate Get-Secret
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-git">
+    Operate Git
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-install">
+    Operate Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-ping">
+    Operate Ping
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-upgrade">
+    Operate Upgrade
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operate-view">
+    Operate View
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tui">
+    TUI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user">
+    User
+  </a>
+<nav aria-label="User" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-apikey">
+    User Apikey
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-delete">
+    User Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-get">
+    User Get
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag">
+    User Tag
+  </a>
+<nav aria-label="User Tag" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag-add">
+    User Tag Add
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-tag-delete">
+    User Tag Delete
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version">
+    Version
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view">
+    View
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace">
+    Workspace
+  </a>
+<nav aria-label="Workspace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-create">
+    Workspace Create
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-delete">
+    Workspace Delete
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workspace-get">
+    Workspace Get
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="dataos-command-line-interface">DataOS Command Line Interface<a class="headerlink" href="#dataos-command-line-interface" title="Permanent link">¶</a></h1>
+<h2 id="structure-of-the-dataos-cli-command">Structure of the DataOS CLI Command<a class="headerlink" href="#structure-of-the-dataos-cli-command" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>Command subcommand flags parameters
+</code></pre></div>
+<h2 id="list-of-dataos-cli-commands">List of DataOS CLI Commands<a class="headerlink" href="#list-of-dataos-cli-commands" title="Permanent link">¶</a></h2>
+<p>You can generate a list of all available commands with -h.</p>
+<p><code>dataos-ctl --help</code></p>
+<p>To get help for specific command use:</p>
+<p><code>dataos-ctl command --help</code></p>
+<h3 id="apply">Apply<a class="headerlink" href="#apply" title="Permanent link">¶</a></h3>
+<p>Create and update resources in a DataOS cluster through running  <em>apply</em>. This command manages applications through <em>.yaml</em> files defining DataOS resources. You can use <em>apply</em> to recursively create and update DataOS objects as needed.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+  dataos-ctl apply [flags]
+
+Flags:
+  -h, --help                  help for apply
+  -l, --lint                  Lint the files, do not apply
+  -f, --manifestFile string   Manifest file location
+  -o, --overrideWarnings      Override the warnings and apply
+  -R, --recursive             Get manifest files recursively from the provided directory
+  -w, --workspace string      Workspace to target resource (default "public")
+</code></pre></div>
+<h3 id="completion">Completion<a class="headerlink" href="#completion" title="Permanent link">¶</a></h3>
+<p>This mode places you in an interactive mode with auto-completion for the given shell (zsh or bash). To setup autocomplete in current bash shell, bash-completion package should be installed first.</p>
+<div class="highlight"><pre><span></span><code>zsh:
+option 1 (speedy prompt startup time):
+    $ dataos-ctl completion zsh &gt; ~/.dataos/.dataos-ctl-completion   # for zsh users
+    $ source ~/.dataos/.dataos-ctl-completion
+option 2 (always gets current commands):
+    $ source &lt;(dataos-ctl completion zsh)  # for zsh users
+
+bash:
+This depends on the bash-completion binary.  Example installation instructions:
+OS X:
+    $ brew install bash-completion
+    $ source $(brew --prefix)/etc/bash_completion
+    $ dataos-ctl completion bash &gt; ~/.dataos/.dataos-ctl-completion  # for bash users
+    $ source ~/.dataos/.dataos-ctl-completion
+Ubuntu:
+    $ apt-get install bash-completion
+    $ source /etc/bash-completion
+    $ source &lt;(dataos-ctl completion bash)
+
+Additionally, you may want to output the completion to a file and source in your .bashrc or .zshrc
+
+Usage:
+dataos-ctl completion SHELL [flags]
+
+Flags:
+-h, --help   help for completion
+</code></pre></div>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
+<p>Manage DataOS Contexts. A Context represents the connection to a DataOS  cluster/instance/environment and can be used to create depots, jobs, queries etc  on that cluster. </p>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: Only one context can be active. </p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>Usage 
+dataos-ctl context [command]
+
+Available Commands:
+delete      Delete DataOS Context
+list        List DataOS contexts
+select      Select DataOS Context
+
+Flags:
+-h, --help   help for context
+
+Use "dataos-ctl context [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="context-list">Context List<a class="headerlink" href="#context-list" title="Permanent link">¶</a></h4>
+<p>Get the list of environments you have initialized using the <em>dataos-ctl init</em> command. The active context will be shown with a star and you can see its URL in the output.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl context select [flags]
+
+Flags:
+-h, --help          help for select
+-n, --name string   name of context to select
+</code></pre></div>
+Here is the expected output:
+<div class="highlight"><pre><span></span><code>➜  ~ dataos-ctl context list
+INFO[0000] * meerkat                                    
+INFO[0000]   squirrel                                   
+INFO[0000]   wholly-merry-orca                          
+INFO[0000] 🔗...https://cleanly-mutual-meerkat.dataos.io 
+</code></pre></div></p>
+<h4 id="context-delete">Context Delete<a class="headerlink" href="#context-delete" title="Permanent link">¶</a></h4>
+<p>Delete the  context which is pointing to your DataOS environment. 
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl context delete [flags]
+
+Flags:
+-h, --help          help for delete
+-n, --name string   name of context to select
+</code></pre></div></p>
+<h4 id="context-select">Context Select<a class="headerlink" href="#context-select" title="Permanent link">¶</a></h4>
+<p>Select a new context to point to, from the available environments. 
+<div class="highlight"><pre><span></span><code>Usage:
+    dataos-ctl context select [flags]
+
+Flags:
+-h, --help          help for select
+-n, --name string   name of context to select
+</code></pre></div></p>
+<h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">¶</a></h3>
+<p>Delete resources in the DataOS.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl delete [flags]
+
+Flags:
+-h, --help                help for delete
+-i, --identifier string   Identifier of resource, like: NAME:VERSION:TYPE
+-n, --name string         Name of resource
+    --namespace string    Namespace to target resource (default "default")
+-t, --type string         The resource type to get, possible values: depot, function, job, policy, service, secret
+</code></pre></div>
+DataOS checks resource dependability while deleting resources.</p>
+<p><img alt="Image" src="../images/cli-resource-delete.png"/></p>
+<h3 id="datanet">Datanet<a class="headerlink" href="#datanet" title="Permanent link">¶</a></h3>
+<p>Manage the Datanet of the DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet [command]
+
+Aliases:
+datanet, catalog
+
+Available Commands:
+create        Create Entry in DataOS Catalog
+dataset       Manage Datasets in the DataOS Catalog
+get           Get Entry
+heartbeat     Send Workflow Run Entry Heartbeat
+lifecycle     Manage Run Entry Lifecycle
+map-stack-run Map the Stack Run to a Run Entry
+
+Flags:
+-h, --help   help for datanet
+
+Use "dataos-ctl datanet [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="datenet-create">Datenet Create<a class="headerlink" href="#datenet-create" title="Permanent link">¶</a></h4>
+<p>Create Entry in the DataOS catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet create [flags]
+
+Flags:
+-h, --help                  help for create
+    --idOutputFile string   Id output file location
+-f, --manifestFile string   Manifest file location
+-o, --outputFile string     Yaml output file location
+    --parentRunId string    Parent Run Id to associate with the Child Catalog Entry
+-p, --printRequest          Print the request as yaml
+-t, --type string           Type of entry: workflow, workflow_run, job, job_run, service, service_run, topology
+-w, --workspace string      Workspace to target catalog entries (default "public")
+</code></pre></div></p>
+<h4 id="datanet-dataset">Datanet Dataset<a class="headerlink" href="#datanet-dataset" title="Permanent link">¶</a></h4>
+<p>Manage datasets in the DataOS catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet dataset [command]
+
+Available Commands:
+create      Create Entry in DataOS Catalog
+get         Get Entry
+versions    Dataset Versions Entry
+
+Flags:
+-h, --help   help for dataset
+
+Use "dataos-ctl datanet dataset [command] --help" for more information about a command.
+</code></pre></div></p>
+<h5 id="datanet-dataset-create">Datanet Dataset Create<a class="headerlink" href="#datanet-dataset-create" title="Permanent link">¶</a></h5>
+<p>Create Entry in the DataOS catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet dataset create [flags]
+
+Flags:
+-h, --help                  help for create
+    --idOutputFile string   Id output file location
+-f, --manifestFile string   Manifest file location
+-o, --outputFile string     Yaml output file location
+-p, --printRequest          Print the request as yaml
+</code></pre></div></p>
+<h5 id="datanet-dataset-get">Datanet Dataset Get<a class="headerlink" href="#datanet-dataset-get" title="Permanent link">¶</a></h5>
+<p>Get Entry in the DataOS Catalog
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet dataset get [flags]
+
+Flags:
+-a, --address string      Dataset address
+-h, --help                help for get
+-o, --outputFile string   Yaml output file location
+-v, --version string      Dataset version
+</code></pre></div></p>
+<h5 id="datanet-dataset-versions">Datanet Dataset Versions<a class="headerlink" href="#datanet-dataset-versions" title="Permanent link">¶</a></h5>
+<p>Dataset Versions Entry in the DataOS Catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet dataset versions [flags]
+
+Flags:
+-a, --address string   Dataset address
+-h, --help             help for versions
+</code></pre></div></p>
+<h4 id="datanet-get">Datanet Get<a class="headerlink" href="#datanet-get" title="Permanent link">¶</a></h4>
+<p>Get Entry in the DataOS Catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet get [flags]
+
+Flags:
+-h, --help                help for get
+-n, --name string         Name or ID of the entry
+-o, --outputFile string   Yaml output file location
+-r, --runId string        Entry run id
+-t, --type string         Type of entry: workflow, workflow_run, job, job_run, service, service_run, topology
+-w, --workspace string    Workspace to target catalog entries (default "public")
+</code></pre></div></p>
+<h4 id="datanet-heartbeat">Datanet Heartbeat<a class="headerlink" href="#datanet-heartbeat" title="Permanent link">¶</a></h4>
+<p>Send workflow run entry heartbeat in the DataOS catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet heartbeat [flags]
+
+Flags:
+-h, --help                help for heartbeat
+-n, --name string         Name of the entry
+-o, --outputFile string   Yaml output file location
+-r, --runId string        Entry run id
+-t, --type string         Type of entry: workflow_run, job_run, service_run
+-w, --workspace string    Workspace to target catalog entries (default "public")
+</code></pre></div></p>
+<h4 id="datanet-lifecyle">Datanet Lifecyle<a class="headerlink" href="#datanet-lifecyle" title="Permanent link">¶</a></h4>
+<p>Manage Run Entry Lifecycle in the DataOS Catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet lifecycle [flags]
+
+Flags:
+  -h, --help                help for lifecycle
+  -m, --message string      Run state transition message
+  -n, --name string         Name of the entry
+  -o, --outputFile string   Yaml output file location
+  -r, --runId string        Entry run id
+  -s, --state string        Run state target transition, can be: start, complete, abort, fail
+  -t, --type string         Type of entry: workflow_run, job_run, service_run
+  -w, --workspace string    Workspace to target catalog entries (default "public")
+</code></pre></div></p>
+<h4 id="datanet-map-stack-run">Datanet Map-Stack-Run<a class="headerlink" href="#datanet-map-stack-run" title="Permanent link">¶</a></h4>
+<p>Map the stack run to a run entry in the DataOS catalog.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl datanet map-stack-run [flags]
+
+Flags:
+-h, --help                     help for map-stack-run
+-n, --name string              Name of the entry
+-r, --runId string             Entry run id
+-s, --stackRunId string        Stack run id
+-v, --topologyVersion string   Stack run topology version
+-t, --type string              Type of entry: workflow_run, job_run, service_run
+-w, --workspace string         Workspace to target catalog entries (default "public")
+</code></pre></div></p>
+<h3 id="develop">Develop<a class="headerlink" href="#develop" title="Permanent link">¶</a></h3>
+<p>With this command , manage DataOS Development. You can test the changes on the local machine before directly aplying on the server. </p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl develop [command]
+
+Available Commands:
+apply             Apply development resources
+get               Get development containers
+get-stack-version Get stack versions
+log-stream        Create development log-stream
+port-forward      Create development port-forward
+start             Start development container
+stop              Stop development containers
+
+Flags:
+-h, --help   help for develop
+
+Use "dataos-ctl develop [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="develop-create">Develop Create<a class="headerlink" href="#develop-create" title="Permanent link">¶</a></h4>
+<p>Create a development container.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl develop create [flags]
+
+Flags:
+-d, --dataDir string        Directory containing the data
+-h, --help                  help for create
+-f, --manifestFile string   Manifest file location
+-s, --stack string          Job stack
+</code></pre></div></p>
+<h4 id="develop-get">Develop Get<a class="headerlink" href="#develop-get" title="Permanent link">¶</a></h4>
+<p>Get running development containers.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl develop get [flags]
+
+Flags:
+-h, --help   help for get
+</code></pre></div>
+<h4 id="develop-port-forward">Develop Port-Forward<a class="headerlink" href="#develop-port-forward" title="Permanent link">¶</a></h4>
+<p>Create development port-forward.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl develop port-forward [flags]
+
+Flags:
+-h, --help               help for port-forward
+-n, --name string        Name of the Resource
+    --pod                Forward specific pod directly
+-p, --port string        Port mapping of the Resource (default "3000:3000")
+-t, --type string        Type of the Resource (default "service")
+-w, --workspace string   Workspace of the Resource (default "public")
+</code></pre></div>
+<h4 id="develop-stop">Develop Stop<a class="headerlink" href="#develop-stop" title="Permanent link">¶</a></h4>
+<p>Stop running development containers.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl develop stop [flags]
+
+Flags:
+-i, --containerId string   Container ID
+-h, --help                 help for stop
+</code></pre></div>
+<h3 id="get">Get<a class="headerlink" href="#get" title="Permanent link">¶</a></h3>
+<p>Use <em>get</em> to pull a list of resources you have currently on your DataOS cluster. The types of resources you can get include-depot, function, job, policy, service, secret.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl get [flags]
+
+Flags:
+-d, --details             Set to true to include details in the result
+-h, --help                help for get
+-i, --identifier string   Identifier of resource, like: NAME:VERSION:TYPE
+-n, --name string         Name to query
+-r, --runtime             Set to true to include runtime details in the result
+    --tags                Set to true to include tags in the result
+-t, --type string         The resource type to get. Workspace resources: workflow, service, secret. Cluster resources: depot, policy.
+-w, --workspace string    Workspace to query
+</code></pre></div>
+Examples:
+<div class="highlight"><pre><span></span><code>dataos-ctl -t workflow -w public -n quality-checks-test-cases   get
+dataos-ctl -i "quality-checks-test-cases | v1beta1 | workflow | public"   get
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>INFO[0000] 🔍 workflow...                                
+INFO[0002] 🔍 workflow...complete                        
+
+            NAME            | VERSION |   TYPE   | WORKSPACE |     TITLE      |        OWNER         
+----------------------------|---------|----------|-----------|----------------|----------------------
+  quality-checks-test-cases | v1beta1 | workflow | public    | Quality-Checks | rakeshvishvakarma21  
+
+
+           JOB NAME          |   STACK    |        JOB TITLE        |    JOB DEPENDENCIES     
+-----------------------------|------------|-------------------------|-------------------------
+  dataos-tool-quality-checks | toolbox    |                         | quality-checks-summary  
+  quality-checks-summary     | flare:1.0  | quality-checks datasets |                         
+  system                     | dataos_cli | System Runnable Steps   |                         
+
+
+  SCHEDULED RUNTIME |    LAST SCHEDULED TIME     
+--------------------|----------------------------
+  RUNNING           | 2021-11-01T16:30:00+05:30  
+
+
+  RUNTIME | PROGRESS |          STARTED          | FINISHED  
+----------|----------|---------------------------|-----------
+  running | 2/3      | 2021-11-01T16:30:00+05:30 |           
+
+
+                NODE NAME               |        JOB NAME        |                       POD NAME                       |     TYPE     |       CONTAINERS        |   PHASE    
+----------------------------------------|------------------------|------------------------------------------------------|--------------|-------------------------|------------
+  quality-checks-summary-bviw-driver    | quality-checks-summary | quality-checks-summary-bviw-driver                   | pod-flare    | spark-kubernetes-driver | running    
+</code></pre></div></p>
+<h3 id="get-runtime">Get Runtime<a class="headerlink" href="#get-runtime" title="Permanent link">¶</a></h3>
+<p>Get the runtime details of a resource in the DataOS.</p>
+<p><div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl get [flags]
+
+Flags:
+-d, --details             Set to true to include details in the result
+-h, --help                help for get
+-i, --identifier string   Identifier of resource, like: NAME:VERSION:TYPE
+-n, --name string         Name to query
+-r, --runtime             Set to true to include runtime details in the result
+    --tags                Set to true to include tags in the result
+-t, --type string         The resource type to get. Workspace resources: workflow, service, secret. Cluster resources: depot, policy.
+-w, --workspace string    Workspace to query
+</code></pre></div>
+Examples: 
+<div class="highlight"><pre><span></span><code>dataos-ctl get runtime -t depot -n icebase
+dataos-ctl get runtime -w system -t cluster -n minervaa
+dataos-ctl get runtime -w system -t service -n iosa-receiver
+dataos-ctl get runtime -w public -t workflow -n cnt-city-demo-01
+dataos-ctl -i "quality-checks-test-cases | v1beta1 | workflow | public"  get runtime
+</code></pre></div>
+You can also provide a string to get the runtime information.
+<div class="highlight"><pre><span></span><code>dataos-ctl -i "quality-checks-test-cases | v1beta1 | workflow | public"  get runtime
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>INFO[0000] 🔍 workflow...                                
+INFO[0002] 🔍 workflow...complete                        
+
+            NAME            | VERSION |   TYPE   | WORKSPACE |     TITLE      |        OWNER         
+----------------------------|---------|----------|-----------|----------------|----------------------
+  quality-checks-test-cases | v1beta1 | workflow | public    | Quality-Checks | rakeshvishvakarma21  
+
+
+           JOB NAME          |   STACK    |        JOB TITLE        |    JOB DEPENDENCIES     
+-----------------------------|------------|-------------------------|-------------------------
+  dataos-tool-quality-checks | toolbox    |                         | quality-checks-summary  
+  quality-checks-summary     | flare:1.0  | quality-checks datasets |                         
+  system                     | dataos_cli | System Runnable Steps   |                         
+
+
+  SCHEDULED RUNTIME |    LAST SCHEDULED TIME     
+--------------------|----------------------------
+  RUNNING           | 2021-11-01T14:30:00+05:30  
+
+
+  RUNTIME | PROGRESS |          STARTED          | FINISHED  
+----------|----------|---------------------------|-----------
+  running | 2/3      | 2021-11-01T14:30:00+05:30 |           
+
+
+                NODE NAME               |        JOB NAME        |                       POD NAME                       |     TYPE     |       CONTAINERS        |   PHASE    
+----------------------------------------|------------------------|------------------------------------------------------|--------------|-------------------------|------------
+  quality-checks-summary-bviw-driver    | quality-checks-summary | quality-checks-summary-bviw-driver                   | pod-flare    | spark-kubernetes-driver | running    
+  quality-checks-summary-execute        | quality-checks-summary | quality-checks-test-cases-bviw-1635757200-996077945  | pod-workflow | main                    | running    
+  quality-checks-summary-start-rnnbl    | quality-checks-summary | -checks-test-cases-bviw-1635757200-3571325227 |  
+</code></pre></div>
+These commands get the runtime info and display the "node"s that are involved, then you can get the details of a specific node which then gives you the pod details of that node:</p>
+<p><div class="highlight"><pre><span></span><code>dataos-ctl -i "quality-checks-test-cases | v1beta1 | workflow | public" --node quality-checks-summary-bviw-driver  get runtime
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>INFO[0000] 🔍 node...                                    
+INFO[0003] 🔍 node...complete                            
+
+              NODE NAME              |              POD NAME              |    IMAGE PULL SECRETS     |   PHASE    
+-------------------------------------|------------------------------------|---------------------------|------------
+  quality-checks-summary-bviw-driver | quality-checks-summary-bviw-driver | dataos-container-registry | Succeeded  
+
+
+      CONTAINER NAME      |         CONTAINER IMAGE          | CONTAINER IMAGE PULL POLICY  
+--------------------------|----------------------------------|------------------------------
+  spark-kubernetes-driver | docker.io/rubiklabs/flare:5.5.48 | IfNotPresent                 
+
+
+  POD CONDITION TYPE | POD CONDITION STATUS | MESSAGE |           TIME             
+---------------------|----------------------|---------|----------------------------
+  Initialized        | True                 |         | 2021-11-01T15:45:26+05:30  
+  PodScheduled       | True                 |         | 2021-11-01T15:45:26+05:30  
+  Ready              | False                |         | 2021-11-01T15:47:25+05:30  
+  ContainersReady    | False                |         | 2021-11-01T15:47:25+05:30  
+
+
+      CONTAINER NAME      |        CONTAINER STATE         |          STARTED          |         FINISHED           
+--------------------------|--------------------------------|---------------------------|----------------------------
+  spark-kubernetes-driver | Terminated Reason:Completed    | 2021-11-01T15:45:28+05:30 | 2021-11-01T15:47:25+05:30  
+                          | Message: ExitCode: 0           |                           |                            
+
+
+  EVENT TYPE | EVENT REASON |   EVENT SOURCE    |                    EVENT MESSAGE                    |       LAST OCCURRED       | COUNT  
+-------------|--------------|-------------------|-----------------------------------------------------|---------------------------|--------
+  Warning    | FailedMount  | kubelet           | MountVolume.SetUp failed for                        | 2021-11-01T15:00:31+05:30 | 1      
+             |              |                   | volume "spark-conf-volume-driver"                   |                           |        
+             |              |                   | : configmap                                         |                           |        
+             |              |                   | "spark-drv-9f60d37cdad602e6-conf-map"               |                           |        
+             |              |                   | not found                                           |                           |        
+</code></pre></div></p>
+<h3 id="health">Health<a class="headerlink" href="#health" title="Permanent link">¶</a></h3>
+<p>Get health of DataOS CLI, DataOS resources and services. It checks if server is reachable and helps in troubleshooting.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl health [flags]
+
+Flags:
+-h, --help   help for health
+</code></pre></div></p>
+<p>Here is the expected output of this command:</p>
+<div class="highlight"><pre><span></span><code> % dataos-ctl health
+INFO[0000] 🏥...                                         
+INFO[0000] DataOS® CLI...OK                             
+INFO[0005] DataOS® CK...OK                              
+INFO[0005] 🏥...complete                                 
+INFO[0005] 🔗...https://formerly-saving-lynx.dataos.io   
+INFO[0005] ⛅️...gcp  
+</code></pre></div>
+<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">¶</a></h3>
+<p>Get help for any command in the application.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl help [command] [flags]
+
+Flags:
+-h, --help   help for help
+</code></pre></div></p>
+<h3 id="init">Init<a class="headerlink" href="#init" title="Permanent link">¶</a></h3>
+<p>Initialize the DataOS environment.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl init [flags]
+
+Flags:
+-h, --help   help for init
+</code></pre></div></p>
+<h3 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h3>
+<p>Get the logs for a resource in the DataOS.</p>
+<p><div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl log [flags]
+
+Flags:
+-f, --follow              Follow the logs
+-h, --help                help for log
+-i, --identifier string   Identifier of resource, like: NAME:VERSION:TYPE
+-r, --includeRunnable     Include runnable system pods and logs
+-n, --name string         Name to query
+-t, --type string         The resource type to get, possible values: service, workflow
+-w, --workspace string    Workspace to query (default "public")
+</code></pre></div>
+Examples: The log command has been updated to pass a "node" as well as to support getting logs for "cluster" and "depot" types that have runtimes. If you don't pass a "node" to the logs command it will try to display all the "main" logs for all nodes. </p>
+<p><div class="highlight"><pre><span></span><code>dataos-ctl log -w public -t workflow -n cnt-city-demo-01 --node city-execute
+dataos-ctl log -w system -t cluster -n minervab --node minervab-ss-0
+</code></pre></div>
+You can also pass the "-i" command with the string to get the logs.
+<div class="highlight"><pre><span></span><code>dataos-ctl -i "quality-checks-test-cases | v1beta1 | workflow | public" --node quality-checks-summary-bviw-driver log
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>INFO[0000] 📃 log(public)...                             
+INFO[0003] 📃 log(public)...complete                     
+
+              NODE NAME              |     CONTAINER NAME      | ERROR  
+-------------------------------------|-------------------------|--------
+  quality-checks-summary-bviw-driver | spark-kubernetes-driver |        
+
+-------------------LOGS-------------------
+2021-11-01 08:32:06,938 INFO  [task-result-getter-1] o.a.s.s.TaskSetManager: Finished task 54.0 in stage 1.0 (TID 69) in 17 ms on 10.212.16.7 (executor 1) (67/200)
+2021-11-01 08:32:06,954 INFO  [dispatcher-CoarseGrainedScheduler] o.a.s.s.TaskSetManager: Starting task 57.0 in stage 1.0 (TID 71) (10.212.16.7, executor 1, partition 57, PROCESS_LOCAL, 4472 bytes) taskResourceAssignments Map()
+2021-11-01 08:32:06,954 INFO  [task-result-getter-2] o.a.s.s.TaskSetManager: Finished task 56.0 in stage 1.0 (TID 70) in 17 ms on 10.212.16.7 (executor 1) (68/200)
+...
+...
+...
+</code></pre></div></p>
+<p>you can also pass the "-c" command with the container name you want to see the logs for.</p>
+<h3 id="login">Login<a class="headerlink" href="#login" title="Permanent link">¶</a></h3>
+<p>Login to the DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl login [flags]
+
+Flags:
+-h, --help      help for login
+</code></pre></div>
+<h3 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">¶</a></h3>
+<p>Maintenance of the DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl maintenance [command]
+
+Available Commands:
+collect-garbage collects garbage on the DataOS.
+
+Flags:
+-h, --help   help for maintenance
+
+Use "dataos-ctl maintenance [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="maintenance-collect-garbage">Maintenance Collect-garbage<a class="headerlink" href="#maintenance-collect-garbage" title="Permanent link">¶</a></h4>
+<p>Collect Garbage on the DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl maintenance collect-garbage [flags]
+
+Flags:
+-d, --duration string     The duration to calculate the age of resources that are eligible for garbage collection (default "168h")
+-h, --help                help for collect-garbage
+-k, --kubeconfig string   Kubeconfig file location
+-l, --layer string        The layer to target in the DataOS, user|system (default "user")
+</code></pre></div>
+<h3 id="operate">Operate<a class="headerlink" href="#operate" title="Permanent link">¶</a></h3>
+<p>Operate the DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate [command]
+
+Available Commands:
+apply        Apply manifest
+chart-export Exports a Helm Chart from a Chart Registry
+git          Git component manifests
+install      Install components
+ping         Ping
+upgrade      Upgrade components
+view         View DataOS® Operator Services
+zip          Zip install files
+
+Flags:
+  -h, --help   help for operate
+
+Use "dataos-ctl operate [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="operate-apply">Operate Apply<a class="headerlink" href="#operate-apply" title="Permanent link">¶</a></h4>
+<p>Apply manifest on the DataOS.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate apply [flags]
+
+Flags:
+-h, --help                  help for apply
+-f, --manifestFile string   Single Manifest File Location
+-n, --namespace string      Namespace
+</code></pre></div></p>
+<h4 id="operate-chart-export">Operate Chart-Export<a class="headerlink" href="#operate-chart-export" title="Permanent link">¶</a></h4>
+<p>Exports a Helm Chart from a Chart Registry.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate chart-export [flags]
+
+Flags:
+    --accessKey string      The AWS Access Key for ECR Chart Registry
+    --accessSecret string   The AWS Access Secret for ECR Chart Registry
+-c, --chart string          The chart ref
+-d, --exportDir string      The directory to export the Helm chart
+-h, --help                  help for chart-export
+    --region string         The AWS Region for ECR Chart Registry
+    --registry string       The AWS ECR Chart Registry
+</code></pre></div></p>
+<h4 id="operate-get-secret">Operate Get-Secret<a class="headerlink" href="#operate-get-secret" title="Permanent link">¶</a></h4>
+<p>Gets a secret from Heimdall.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate get-secret [flags]
+
+Flags:
+-h, --help        help for get-secret
+-i, --id string   The secret id
+</code></pre></div></p>
+<h4 id="operate-git">Operate Git<a class="headerlink" href="#operate-git" title="Permanent link">¶</a></h4>
+<p>Git component manifests on the DataOS.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate git [flags]
+
+Flags:
+-e, --email string   Operator email
+-h, --help           help for git
+-l, --localOnly      Perform local only
+-n, --name string    Operator name
+-p, --push           Push changes
+-r, --resetGitDir    Reset the local git directory
+</code></pre></div></p>
+<h4 id="operate-install">Operate Install<a class="headerlink" href="#operate-install" title="Permanent link">¶</a></h4>
+<p>When you create a new server, you want to install new applications on the server. Use this command to install one or more applications/components on the server.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate install [flags]
+
+Flags:
+-h, --help                    help for install
+-i, --imagesFile string       Installation Images File Location
+-f, --installFile string      Installation Manifest File Location
+-n, --noGitOps                Do not push changes to the GitOps repo in DataOS®
+    --oldReleaseManifest      Use old install manifest format
+    --renderOnly              Render only
+-r, --replaceIfExists         Replace existing resources
+-s, --secretsFile string      Installation Secrets File Location
+    --useExternalPostgresql   Use external postgresql
+-v, --valuesFile string       Installation Values File Location
+</code></pre></div></p>
+<h4 id="operate-ping">Operate Ping<a class="headerlink" href="#operate-ping" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate ping [flags]
+
+Flags:
+-h, --help   help for ping
+</code></pre></div>
+<h4 id="operate-upgrade">Operate Upgrade<a class="headerlink" href="#operate-upgrade" title="Permanent link">¶</a></h4>
+<p>Upgrade components on the DataOS.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate upgrade [flags]
+
+Flags:
+-h, --help                    help for upgrade
+-i, --imagesFile string       Installation Images File Location
+-f, --installFile string      Installation Manifest File Location
+    --oldReleaseManifest      Use old install manifest format
+-s, --secretsFile string      Installation Secrets File Location
+    --useExternalPostgresql   Use external postgresql
+-v, --valuesFile string       Installation Values File Location
+</code></pre></div></p>
+<h4 id="operate-view">Operate View<a class="headerlink" href="#operate-view" title="Permanent link">¶</a></h4>
+<p>View DataOS Operator Services from the local machine without going to server. You can create a data pipe from server to local machine. 
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl operate view [flags]
+
+Flags:
+-h, --help                            help for view
+-p, --localPort int                   The starting local port to port-forward services to (default 8081)
+-s, --servicesToPortForward strings   The comma separated list of services to port-forward local: 
+                                        metis,cerebro,aurora-beanstalkd,git,prometheus,
+                                        service-mesh,cruise-control,kibana,spark-history
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>➜  ~ dataos-ctl operate view -s metis
+INFO[0000] 📚 metis view...                              
+INFO[0000] 🔭 metis port-forward..                       
+INFO[0003] close connections hit enter/return?
+INFO[0004] 🔭 metis port-forward.. ready
+INFO[0004] : metis http://localhost:8081
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: Config File ".dataos.ck.config" should be present in the folder  "[/Users/[username]/.dataos/context].</p>
+</blockquote>
+<h3 id="tui">TUI<a class="headerlink" href="#tui" title="Permanent link">¶</a></h3>
+<p>Dataos-ctl TUI is a Terminal User Interface for DataOS. It shows all the key resources deployed on the server.  You can click on the resource menu to see the corresponding details in the Resource Summary section. You can view artefacts and Run time services/resources and and their YAML. You can also view logs for runtime.</p>
+<p><img alt="Image" src="../images/cli-tui.png"/></p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl tui [flags]
+
+Flags:
+-h, --help                help for tui
+-w, --workspaces string   list of workspaces to include, comma separated
+</code></pre></div>
+<h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">¶</a></h3>
+<p>Manage DataOS users.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user [command]
+
+Available Commands:
+apikey      Manage a DataOS® User apikey
+delete      Delete a user
+get         Get users
+tag         Manage DataOS® User's tags
+
+Flags:
+-h, --help   help for user
+
+Use "dataos-ctl user [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="user-apikey">User Apikey<a class="headerlink" href="#user-apikey" title="Permanent link">¶</a></h4>
+<p>Manage a DataOS user apikey.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user apikey [command]
+
+Available Commands:
+create      Create an apikey for a user
+delete      Delete the apikey for a user
+get         Get the apikey for a user
+
+Flags:
+-h, --help   help for apikey
+
+Use "dataos-ctl user apikey [command] --help" for more information about a command.
+</code></pre></div>
+<h4 id="user-delete">User Delete<a class="headerlink" href="#user-delete" title="Permanent link">¶</a></h4>
+<p>Delete a user</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user delete [flags]
+
+Flags:
+-h, --help        help for delete
+-i, --id string   Id of the user
+</code></pre></div>
+<h4 id="user-get">User Get<a class="headerlink" href="#user-get" title="Permanent link">¶</a></h4>
+<p>Get users
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user get [flags]
+
+Flags:
+-a, --all         Get all users
+-h, --help        help for get
+-i, --id string   Id of the user
+</code></pre></div></p>
+<h4 id="user-tag">User Tag<a class="headerlink" href="#user-tag" title="Permanent link">¶</a></h4>
+<p>Manage DataOS user's tags.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user tag [command]
+
+Available Commands:
+add         Add tags to a user
+delete      Delete tags from a user
+
+Flags:
+-h, --help   help for tag
+
+Use "dataos-ctl user tag [command] --help" for more information about a command.
+</code></pre></div>
+<h5 id="user-tag-add">User Tag Add<a class="headerlink" href="#user-tag-add" title="Permanent link">¶</a></h5>
+<p>Add tags to a user.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user tag add [flags]
+
+Flags:
+-h, --help           help for add
+-i, --id string      Id of the user
+-t, --tags strings   The tags to add
+</code></pre></div></p>
+<h5 id="user-tag-delete">User Tag Delete<a class="headerlink" href="#user-tag-delete" title="Permanent link">¶</a></h5>
+<p>Delete tags from a user.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl user tag delete [flags]
+
+Flags:
+-h, --help           help for delete
+-i, --id string      Id of the user
+-t, --tags strings   The tags to delete
+</code></pre></div></p>
+<h3 id="version">Version<a class="headerlink" href="#version" title="Permanent link">¶</a></h3>
+<p>Print the version number of DataOS.</p>
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl version [flags]
+
+Flags:
+-h, --help   help for version
+</code></pre></div>
+<h3 id="view">View<a class="headerlink" href="#view" title="Permanent link">¶</a></h3>
+<p>View core applications in the DataOS.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl view [flags]
+
+Flags:
+-a, --application string   The application to view in your default browser: apps, datanet, workbench, atlas
+-h, --help                 help for view
+</code></pre></div></p>
+<h3 id="workspace">Workspace<a class="headerlink" href="#workspace" title="Permanent link">¶</a></h3>
+<p>Manage DataOS workspaces.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl workspace [command]
+
+Available Commands:
+create      Create workspace
+delete      Delete workspaces
+get         Get workspaces
+
+Flags:
+-h, --help   help for workspace
+
+Use "dataos-ctl workspace [command] --help" for more information about a command.
+</code></pre></div></p>
+<h4 id="workspace-create">Workspace Create<a class="headerlink" href="#workspace-create" title="Permanent link">¶</a></h4>
+<p>Create workspace.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl workspace create [flags]
+
+Flags:
+-d, --description string   workspace description
+-h, --help                 help for create
+    --labels strings       The workspace labels
+-l, --layer string         workspace layer (default "user")
+-n, --name string          workspace name
+    --tags strings         The workspace tags
+-v, --version string       workspace version (default "v1beta1")
+</code></pre></div></p>
+<h4 id="workspace-delete">Workspace Delete<a class="headerlink" href="#workspace-delete" title="Permanent link">¶</a></h4>
+<p>Delete workspaces.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl workspace delete [flags]
+
+Flags:
+-h, --help          help for delete
+-n, --name string   workspace name
+</code></pre></div></p>
+<h4 id="workspace-get">Workspace Get<a class="headerlink" href="#workspace-get" title="Permanent link">¶</a></h4>
+<p>Get workspaces.
+<div class="highlight"><pre><span></span><code>Usage:
+dataos-ctl workspace get [flags]
+
+Flags:
+-h, --help           help for get
+-l, --layer string   workspace layer (default "user")
+</code></pre></div></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../installation/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Installation[Internal Users]
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../tutorials/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Tutorials
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

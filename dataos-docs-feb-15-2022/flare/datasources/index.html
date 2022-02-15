@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Reading and Writing Data - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#reading-and-writing-data">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Reading and Writing Data
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../governance/datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Reading and Writing Data
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Reading and Writing Data
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-section">
+    Inputs section
+  </a>
+<nav aria-label="Inputs section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-section-example">
+    Inputs section example
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#outputs-section">
+    Outputs section
+  </a>
+<nav aria-label="Outputs section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-for-file-based-output">
+    YAML for file-based output
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-for-iceberg-output-type">
+    YAML for Iceberg output type
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-data-sources">
+    Supported data sources
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes">
+    Recipes
+  </a>
+<nav aria-label="Recipes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reading-data">
+    Reading data
+  </a>
+<nav aria-label="Reading data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avro">
+    AVRO
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#csv">
+    CSV
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+    JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parquet">
+    PARQUET
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orc">
+    ORC
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text">
+    TEXT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xlsx">
+    XLSX
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xml">
+    XML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-data">
+    Writing data
+  </a>
+<nav aria-label="Writing data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parquet_1">
+    PARQUET
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iceberg">
+    ICEBERG
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../governance/policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-section">
+    Inputs section
+  </a>
+<nav aria-label="Inputs section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-section-example">
+    Inputs section example
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#outputs-section">
+    Outputs section
+  </a>
+<nav aria-label="Outputs section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-for-file-based-output">
+    YAML for file-based output
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yaml-for-iceberg-output-type">
+    YAML for Iceberg output type
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-data-sources">
+    Supported data sources
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recipes">
+    Recipes
+  </a>
+<nav aria-label="Recipes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reading-data">
+    Reading data
+  </a>
+<nav aria-label="Reading data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avro">
+    AVRO
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#csv">
+    CSV
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+    JSON
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parquet">
+    PARQUET
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orc">
+    ORC
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text">
+    TEXT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xlsx">
+    XLSX
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xml">
+    XML
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-data">
+    Writing data
+  </a>
+<nav aria-label="Writing data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parquet_1">
+    PARQUET
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iceberg">
+    ICEBERG
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="reading-and-writing-data">Reading and Writing Data<a class="headerlink" href="#reading-and-writing-data" title="Permanent link">¶</a></h1>
+<p>Flare can process data from various data management/storage systems such as file systems, relational databases, Icebase, stream data. It supports reading and writing from different data sources (structured, semi-structured and unstructured) available in Apache Spark.</p>
+<ul>
+<li>
+<p>Unstructured:  TXT, CSV</p>
+</li>
+<li>
+<p>Semi structured: JSON, XML</p>
+</li>
+<li>
+<p>Structured: AVRO, PARQUET, ORC, XLSX</p>
+</li>
+</ul>
+<p>This article will give you a better understanding of how you perform read and write operations in your Flare workflows.</p>
+<p>You can easily specify the configuration settings in YAML for reading and writing data. Define them under <strong>inputs</strong> and <strong>outputs</strong> section in the YAML file of your Flare job. You can also use specific options available for the various data sources based on their capabilities.</p>
+<h2 id="inputs-section">Inputs section<a class="headerlink" href="#inputs-section" title="Permanent link">¶</a></h2>
+<p>While reading data from any data source, you need to define the following under <strong>inputs</strong> section. </p>
+<ul>
+<li>name: Name to refer the dataset </li>
+<li>dataset: Address of the dataset to be read</li>
+<li>format: [optional] Format of data to be read. If a dataset is registered and indexed with Metis then format will be automatically identified. </li>
+<li>schema/schema path:  [optional] If a data source accepts a user-specific schema, apply them.</li>
+<li>options: [optional] Key-value configuration for a specific data source to parameterize how data has to be read. If no option is supplied, default values for the options will be used.</li>
+</ul>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: Your Flare workflow can read from multiple data sources. You have to provide an array of data source definitions in such a scenario, as shown in the following example.</p>
+</blockquote>
+<h3 id="inputs-section-example">Inputs section example<a class="headerlink" href="#inputs-section-example" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>  
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_csv</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:none/sample_city.csv</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">csv</span>
+  <span class="nt">schemaPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:default/schemas/avsc/city.avsc</span>
+
+  <span class="nt">schemaType</span><span class="p">:</span>
+  <span class="nt">options</span><span class="p">:</span> 
+    <span class="l l-Scalar l-Scalar-Plain">key1:value1</span>                                            <span class="c1"># Data source specific options</span>
+    <span class="l l-Scalar l-Scalar-Plain">key2:value2</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_states</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:none/states</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">csv</span>
+  <span class="nt">schema</span><span class="p">:</span> <span class="s">"{\"type\":\"struct\",\"fields\":[{\"name\":\"country_code\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"country_id\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"id\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"latitude\",\"type\":\"double\",\"nullable\":true,\"metadata\":{}},{\"name\":\"longitude\",\"type\":\"double\",\"nullable\":true,\"metadata\":{}}]}"</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_input_view</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://kafka:default/cloudevents01</span>
+  <span class="nt">options</span><span class="p">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">key1:value1</span>                                            <span class="c1"># Data source specific options</span>
+    <span class="l l-Scalar l-Scalar-Plain">key2:value2</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transaction_abfss</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://abfss01:default/transactions_abfss_01</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avro</span>
+  <span class="nt">options</span><span class="p">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">key1:value1</span>                                            <span class="c1"># Data source specific options</span>
+    <span class="l l-Scalar l-Scalar-Plain">key2:value2</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">input_customers</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iceberg</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:retail/customer</span>
+</code></pre></div>
+<h2 id="outputs-section">Outputs section<a class="headerlink" href="#outputs-section" title="Permanent link">¶</a></h2>
+<p>Currently, Flare supports two output formats- parquet and iceberg. For writing data, define the details where the dataset is to be stored, what is going to be its name etc.</p>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: It is possible to write the output of a Flare job to multiple locations. You can simply write the output and dataset information multiple times.</p>
+</blockquote>
+<ol>
+<li>
+<p>In the <strong>outputs</strong> section, provide the reference and location information for the output.</p>
+<ul>
+<li>name: Reference for the output </li>
+<li>depot: to the dataset and destination path of the data.Specify Depot you want to write data to.</li>
+</ul>
+</li>
+<li>
+<p>In the <strong>steps</strong> section, describe the steps to generate the output. you also need to provide the details of the ouput dataset and the order in which multiple operations will be executed to create the desired dataset.</p>
+<ul>
+<li>
+<p><strong>sink</strong>: Provide the details of the output dataset.</p>
+<ul>
+<li>sequenceName: The name of the sequence relevant for the sink</li>
+<li>datasetName: Name assigned to the new dataset</li>
+<li>title: Title for the output dataset</li>
+<li>description: Description for the output dataset</li>
+<li>tags: Labels attached to the output dataset</li>
+<li>outputName: Name defined in the outputs section above</li>
+<li>outputType: New dataset's file format</li>
+<li>outputOptions: Different options depending on different outputTypes supported in Spark<ul>
+<li>partitionBy: Column used for partitioning the data. </li>
+<li>sort: Scope and columns for the sorting, sort order.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>sequence</strong>: Order of operations, further has two key-value pairs:</p>
+<ul>
+<li>name: Sequence name to be used as a reference for the output of the SQL query it has, in the form of a table or a  view.</li>
+<li>sql: SQL query of the operation in Spark SQL format SQL query for the execution of the operation in Spark.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: The <strong>steps</strong> section can also be referenced via a separate YAML. </p>
+</blockquote>
+<h3 id="yaml-for-file-based-output">YAML for file-based output<a class="headerlink" href="#yaml-for-file-based-output" title="Permanent link">¶</a></h3>
+<p>The following YAML shows the 'outputs' section for the file-based output type. In <strong>outputOptions</strong>, you can provide additional data source-specific options to customize the behavior of writing.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">outputs</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+      <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://filebase:raw01</span>
+    <span class="nt">steps</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">sink</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">sequenceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seq_01</span>
+          <span class="nt">datasetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">retail_dataset</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Retail Data</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ingested retail data</span>
+          <span class="nt">tags</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Connect</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">retail</span>
+          <span class="nt">outputName</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">output01</span>
+          <span class="nt">outputType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Parquet</span>
+          <span class="nt">outputOptions</span><span class="p">:</span>
+            <span class="nt">saveMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">overwrite</span>
+            <span class="nt">partitionBy</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cust_id</span>
+
+      <span class="nt">sequence</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seq_00</span>
+          <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select *, to_timestamp(pickup_datetime/1000) as date_col from retail_data</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seq_01</span>
+          <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SELECT *, date_format(now(), 'yyyyMMddHHmm') as version, now() as</span>
+            <span class="l l-Scalar l-Scalar-Plain">ts_retail_data FROM seq_00</span>
+</code></pre></div>
+<h3 id="yaml-for-iceberg-output-type">YAML for Iceberg output type<a class="headerlink" href="#yaml-for-iceberg-output-type" title="Permanent link">¶</a></h3>
+<p>In case of the Iceberg output type, provide some of the iceberg specific properties such as write format, compression method, partition specs under <strong>iceberg</strong> section. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">outputs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+        <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:retail?acl=rw</span>
+      <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">sink</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">sequenceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cities</span>
+            <span class="nt">datasetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">city</span>
+            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">City Source Data</span>
+            <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">City data ingested from external csv</span>
+            <span class="nt">tags</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Connect</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">City</span>
+
+            <span class="nt">outputName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+            <span class="nt">outputType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Iceberg</span>
+            <span class="nt">outputOptions</span><span class="p">:</span>
+               <span class="nt">saveMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">append</span>
+               <span class="nt">sort</span><span class="p">:</span>
+                 <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">partition</span>
+                 <span class="nt">columns</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cityId</span>
+                      <span class="nt">order</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">desc</span>
+               <span class="nt">iceberg</span><span class="p">:</span>                                       <span class="c1"># Iceberg specific properties</span>
+                <span class="nt">properties</span><span class="p">:</span>
+                   <span class="nt">write.format.default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">parquet</span>
+                   <span class="nt">write.metadata.compression-codec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gzip</span>
+                <span class="nt">partitionSpec</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">identity</span>
+                    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cityId</span>
+
+      <span class="-Error"> </span><span class="nt">sequence</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cities</span>
+            <span class="nt">doc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pick all columns from cities and add version as yyyyMMddHHmm formatted</span>
+              <span class="l l-Scalar l-Scalar-Plain">timestamp.</span>
+            <span class="nt">sqlFile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare/connect-city/city.sql</span>
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: It is important to define partitionSpec under <strong>iceberg</strong> section to apply the partition strategy effectively.</p>
+</blockquote>
+<h2 id="supported-data-sources">Supported data sources<a class="headerlink" href="#supported-data-sources" title="Permanent link">¶</a></h2>
+<p>This section describes the Apache Spark data sources you can use in Flare for reading and writing data. </p>
+<p>Flare supports reading/writing from the following data sources. </p>
+<table>
+<thead>
+<tr>
+<th><strong>Data Source</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Properties</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVRO</td>
+<td>Read</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-avro.html#data-source-option" target="_blank">Avro options </a></td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>Read</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-csv.html#data-source-option" target="_blank">CSV options</a></td>
+</tr>
+<tr>
+<td>ICEBERG</td>
+<td>Read/Write</td>
+<td><a href="https://iceberg.apache.org/#spark-configuration/" target="_blank">Iceberg Spark Configurations </a></td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>Read</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-json.html#data-source-option" target="_blank">JSON options </a></td>
+</tr>
+<tr>
+<td>ORC</td>
+<td>Read</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-orc.html" target="_blank">ORC options </a></td>
+</tr>
+<tr>
+<td>PARQUET</td>
+<td>Read/Write</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-parquet.html#data-source-option" target="_blank">Parquet options</a></td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>Read</td>
+<td><a href="https://spark.apache.org/docs/latest/sql-data-sources-text.html#data-source-option" target="_blank">Text options </a></td>
+</tr>
+<tr>
+<td>XLSX</td>
+<td>Read</td>
+<td><a href="https://github.com/crealytics/spark-excel" target="_blank">Spark Excel options </a></td>
+</tr>
+<tr>
+<td>XML</td>
+<td>Read</td>
+<td><a href="https://github.com/databricks/spark-xml" target="_blank">Spark XML options</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="recipes">Recipes<a class="headerlink" href="#recipes" title="Permanent link">¶</a></h2>
+<p>This section describes the data source-specific options you can use in Flare to read and write data. </p>
+<h3 id="reading-data">Reading data<a class="headerlink" href="#reading-data" title="Permanent link">¶</a></h3>
+<p>The following examples show how to read  data from supported data sources.</p>
+<h4 id="avro">AVRO<a class="headerlink" href="#avro" title="Permanent link">¶</a></h4>
+<p>Avro format is a row-based storage format for Hadoop, which is widely used as a serialization platform. Avro facilitates the exchange of big data between programs written in any language. Avro supports evolutionary schemas, which supports compatibility checks and allows evolving your data over time. </p>
+<p><strong>Sample YAML file</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_avro</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/avro</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avro</span>
+    <span class="nt">schemaPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/datadir/data/sample_avro.avsc</span>
+    <span class="nt">options</span><span class="p">:</span>
+        <span class="nt">avroSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">none</span>
+        <span class="nt">datetimeRebaseMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EXCEPTION/CORRECTED/LEGACY</span> 
+        <span class="nt">positionalFieldMatching</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true/false</span> 
+</code></pre></div></p>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more about each of the options for AVRO file, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-avro.html#data-source-option" target="_blank">Avro options </a>.</p>
+</blockquote>
+<h4 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">¶</a></h4>
+<p>Flare allows you to read a file or directory of files in CSV format. You can provide various options to customize the behavior of reading, such as controlling the behavior of the header, delimiter character, character set, and so on.</p>
+<p>The following YAML file describes how you define various options when you want to read from a CSV file.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>  
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_csv</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/datadir/data/sample_csv.csv</span>         <span class="c1"># complete file path   </span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">csv</span>
+  <span class="nt">options</span><span class="p">:</span>
+   <span class="nt">header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false/true</span>  
+   <span class="nt">inferSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
+   <span class="nt">delimiter</span><span class="p">:</span> <span class="s">"</span><span class="nv">   </span><span class="s">"</span> 
+   <span class="nt">nullValue</span><span class="p">:</span> <span class="s">"GREAL"</span>  
+   <span class="nt">enforceSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>   
+   <span class="nt">timestampFormat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]</span> 
+   <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PERMISSIVE/DROPMALFORMED/FAILFAST</span> 
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">multiple_csvdata</span>
+  <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/datadir/data</span>                      <span class="c1"># complete folder path</span>
+  <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">csv</span>
+  <span class="nt">options</span><span class="p">:</span>
+   <span class="nt">header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false/true</span>  
+   <span class="nt">inferSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more about each of the options for CSV file, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-csv.html#data-source-option" target="_blank">CSV options</a>.</p>
+</blockquote>
+<h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">¶</a></h4>
+<p>Flare can automatically infer the schema of a JSON file and load it as a DataOS dataset. Each line in JSON file must contain a separate, self-contained valid JSON object. For a regular multi-line JSON file, set the multiLine option to true.</p>
+<p>The following YAML file describes how you define various options for reading from a JSON file.</p>
+<p><strong>Sample YAML file</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_json</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/json</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">json</span>
+    <span class="nt">options</span><span class="p">:</span>
+      <span class="nt">primitivesAsString</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true/false</span> 
+      <span class="nt">prefersDecimal</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true/false</span> 
+      <span class="nt">allowComments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true/false</span> 
+      <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PERMISSIVE/DROPMALFORMED/FAILFAST</span> 
+      <span class="nt">timestampFormat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX].</span>
+      <span class="nt">dateFormat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yyyy-MM-dd.</span>
+      <span class="nt">multiLine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true/false</span>                 
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-json.html#data-source-option" target="_blank">JSON options </a>.</p>
+</blockquote>
+<h4 id="parquet">PARQUET<a class="headerlink" href="#parquet" title="Permanent link">¶</a></h4>
+<p>Parquet is a columnar format supported by many other data processing systems. Flare provides support for both reading and writing Parquet files that automatically preserve the original data schema. </p>
+<p>Parquet also supports schema evolution. Users can start with a simple schema and gradually add more columns to the schema as needed. In this way, users may have multiple Parquet files with different but mutually compatible schemas. The Parquet data source can now automatically detect this case and merge schemas of all these files.</p>
+<p>While writing to the parquet file, you need to provide configuration settings for the 'Save' mode and 'Compression' method.</p>
+<p>This example YAML file shows how you define various options for reading from a Parquet file.</p>
+<p><strong>Sample YAML</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_parquet</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/parquet</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">parquet</span>
+    <span class="nt">schemaPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/datadir/data/sample_avro.avsc</span>
+    <span class="nt">options</span><span class="p">:</span>
+        <span class="nt">mergeSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false/true</span> 
+        <span class="nt">datetimeRebaseMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EXCEPTION/CORRECTED/LEGACY</span> 
+        <span class="nt">int96RebaseMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EXCEPTION/CORRECTED/LEGACY</span>
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-parquet.html#data-source-option" target="_blank">Parquet options</a>.</p>
+</blockquote>
+<h4 id="orc">ORC<a class="headerlink" href="#orc" title="Permanent link">¶</a></h4>
+<p>Apache ORC (Optimized Row Columnar) is a free and open-source column-oriented data storage format of the Apache Hadoop ecosystem. Flare allows you to read a file in orc format. </p>
+<p>This example file shows how you define various options for reading from an ORC file.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_orc</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/datadir/data/sample_orc.orc</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">orc</span> 
+    <span class="nt">options</span><span class="p">:</span>
+    <span class="nt">mergeSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false/true</span> <span class="c1"># Sets whether we should merge schemas collected from all ORC part-files.</span>
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-orc.html" target="_blank">ORC options </a>.</p>
+</blockquote>
+<h4 id="text">TEXT<a class="headerlink" href="#text" title="Permanent link">¶</a></h4>
+<p>Flare allows you to read a text file or directory of text files into a DataOS dataset. When reading a text file, each line becomes each row with a string "value" column by default. In YAML, you can specify various options to customize reading behavior, such as controlling the behavior of the line separator.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_txt</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/sample.txt</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">text</span>
+    <span class="nt">options</span><span class="p">:</span>
+        <span class="nt">wholetext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
+        <span class="nt">lineSep</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\r, \r\n, \n</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_txt_files</span>
+      <span class="l l-Scalar l-Scalar-Plain">dataset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/txt</span>
+      <span class="l l-Scalar l-Scalar-Plain">format</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">text</span>
+      <span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+          <span class="nt">wholetext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">lineSep</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\r, \r\n, \n</span>           
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more, see the <a href="https://spark.apache.org/docs/latest/sql-data-sources-text.html#data-source-option" target="_blank">Text options </a>.</p>
+</blockquote>
+<h4 id="xlsx">XLSX<a class="headerlink" href="#xlsx" title="Permanent link">¶</a></h4>
+<p>Flare allows you to construct a dataset by reading a data file in XLSX format.  You can configure several options for XLSX file and customize the behavior of reading, such as location, sheet names, cell range, workbook password, etc. Flare supports reading multiple XLSX files kept in a folder. </p>
+<p>This example YAML file shows how you define various options for reading from an XLSX file.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_xlsx</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/xlsx/returns.xlsx</span>    <span class="c1"># pass complete file path</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xlsx</span>
+    <span class="nt">sheetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aa</span> 
+    <span class="nt">header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false/true</span>  
+    <span class="nt">workbookPassword</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span> 
+    <span class="nt">inferSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> <span class="c1"># If column types to be inferred when reading the file.</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_xlsx_files</span>
+      <span class="l l-Scalar l-Scalar-Plain">dataset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/xlsx</span>    <span class="c1"># pass complete path for the folder where files are kept</span>
+      <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xlsx</span>            
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more about the XLSX options, see the <a href="https://github.com/crealytics/spark-excel" target="_blank">Spark Excel options </a>.</p>
+</blockquote>
+<h4 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">¶</a></h4>
+<p>Flare allows you to read a file in XML format. You can provide various options to customize the behavior of reading, such as how you want to deal with corrupt records, specify the path to an XSD file that is used to validate the XML for each row individually, whether to exclude attributes, etc. </p>
+<p>This example YAML file shows how you define various options for reading from a XML file.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample_xml</span>
+    <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:sampledata/xml</span>
+    <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xml</span>
+    <span class="nt">schemaPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://thirdparty01:none/schemas/avsc/csv.avsc</span>
+    <span class="nt">options</span><span class="p">:</span>
+        <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Location of files</span> 
+        <span class="nt">excludeAttribute </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+        <span class="nt">inferSchema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">columnNameOfCorruptRecord</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_corrupt_record</span>
+        <span class="nt">attributePrefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_</span>
+        <span class="nt">valueTag</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_VALUE</span>
+        <span class="nt">charset</span><span class="p">:</span> <span class="s">'UTF-8'</span> 
+        <span class="nt">ignoreNamespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+        <span class="nt">timestampFormat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">UTC</span>
+        <span class="nt">dateFormat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ISO_DATE</span>  
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more about the options for XML file, see the <a href="https://github.com/databricks/spark-xml" target="_blank">Spark XML options</a>.</p>
+</blockquote>
+<h3 id="writing-data">Writing data<a class="headerlink" href="#writing-data" title="Permanent link">¶</a></h3>
+<p>The following examples show how you can specify various options while writing data to the supported data sources in Flare. </p>
+<h4 id="parquet_1">PARQUET<a class="headerlink" href="#parquet_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">outputs</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+    <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://filebase:raw01</span>
+<span class="nt">steps</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">sink</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">sequenceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi_ts</span>
+      <span class="nt">datasetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi_parquet_06</span>
+      <span class="nt">outputName</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">output01</span>
+      <span class="nt">outputType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Parquet</span>
+      <span class="nt">outputOptions</span><span class="p">:</span>
+        <span class="nt">saveMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">overwrite</span>
+        <span class="nt">partitionBy</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">store_and_fwd_flag</span>
+      <span class="nt">tags</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Connect</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NY-Taxi</span>
+      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">NY-Taxi Data</span>
+
+    <span class="nt">sequence</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi_changed_dateformat</span>
+        <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select *, to_timestamp(pickup_datetime/1000) as date_col from ny_taxi</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ny_taxi_ts</span>
+        <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SELECT *, date_format(now(), 'yyyyMMddHHmm') as version, now() as</span>
+          <span class="l l-Scalar l-Scalar-Plain">ts_ny_taxi FROM ny_taxi_changed_dateformat</span>
+</code></pre></div>
+<h4 id="iceberg">ICEBERG<a class="headerlink" href="#iceberg" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">outputs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+        <span class="nt">depot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:retail?acl=rw</span>
+<span class="nt">steps</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">sink</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">sequenceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cities</span>
+          <span class="nt">datasetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">city</span>
+          <span class="nt">outputName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">output01</span>
+          <span class="nt">outputType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Iceberg</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">City data ingested from external csv</span>
+          <span class="nt">tags</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Connect</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">City</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">City Source Data</span>
+          <span class="nt">outputOptions</span><span class="p">:</span>
+            <span class="nt">saveMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">overwrite</span>
+            <span class="nt">iceberg</span><span class="p">:</span>
+              <span class="nt">properties</span><span class="p">:</span>
+                <span class="nt">write.format.default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">parquet</span>
+                <span class="nt">write.metadata.compression-codec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gzip</span>
+            <span class="nt">partitionSpec</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">identity</span>
+                <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">version</span>             
+      <span class="nt">sequence</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cities</span>
+          <span class="nt">doc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Pick all columns from cities and add version as yyyyMMddHHmm formatted</span>
+            <span class="l l-Scalar l-Scalar-Plain">timestamp.</span>
+          <span class="nt">sqlFile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare/connect-city/city.sql</span>
+</code></pre></div>
+<blockquote>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21z"></path></svg></span> <strong>Note</strong>: To understand more, see the <a href="https://iceberg.apache.org/#spark-configuration/" target="_blank">Iceberg Spark Configurations </a>.</p>
+</blockquote>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../functions/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Functions
+                </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../partitioning/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Partitioning
+                </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>

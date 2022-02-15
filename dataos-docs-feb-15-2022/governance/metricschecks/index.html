@@ -1,0 +1,1189 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.6" name="generator"/>
+<title>Metrics and Checks - DataOS Documentation</title>
+<link href="../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#metrics-and-checks">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="DataOS Documentation" class="md-header-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            DataOS Documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Metrics and Checks
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/">
+        CLI
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../depots/">
+        Depots
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../flare/">
+        Flare
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../datagovernance/">
+        Governance
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/tableau/">
+        Integrations
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../minerva/introduction/">
+        Minerva
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/skewandkurtosis/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="DataOS Documentation" class="md-nav__button md-logo" href="../.." title="DataOS Documentation">
+<img alt="logo" src="../../assets/favicon.png"/>
+</a>
+    DataOS Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installationcli/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/installation/">
+        Installation[Internal Users]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/cli/">
+        Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/tutorials/">
+        Tutorials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Depots
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depots" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Depots
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/createdepots/">
+        Create Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/typeofdepots/">
+        Type of Depots
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/compatibilitymatrix/">
+        Compatibility Matrix
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" id="nav-3-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5">
+        Depot Config Templates
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Depot Config Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-3-5">
+<span class="md-nav__icon md-icon"></span>
+          Depot Config Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" id="nav-3-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-3-5-1">
+        Supported Data Sources
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Supported Data Sources" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-3-5-1">
+<span class="md-nav__icon md-icon"></span>
+          Supported Data Sources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/amazons3/">
+        Amazon S3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/pulsar/">
+        Apache Pulsar
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/azureblobfilestorage/">
+        Azur Blob Storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/windowsazurstorageblob/">
+        Azure Data Lake Storage Gen2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/bigquery/">
+        BigQuery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/file/">
+        File
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/jdbc/">
+        JDBC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/kafka/">
+        Kafka
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/mysql/">
+        MYSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/oracle/">
+        Oracle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/postgresql/">
+        PostgreSQL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/presto/">
+        Presto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/redis/">
+        Redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../depots/snowflake/">
+        Snowflake
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Flare
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flare" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Flare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/flaretuning/">
+        Flare Job Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/installation/">
+        Standalone Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datasources/">
+        Reading and Writing Data
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" id="nav-4-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6">
+        Scenarios
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Scenarios" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="nav-4-6">
+<span class="md-nav__icon md-icon"></span>
+          Scenarios
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6-1" id="nav-4-6-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-4-6-1">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="nav-4-6-1">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitioning/">
+        Partitioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/partitionevolution/">
+        Partition Evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/datareplay/">
+        Data Replay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/compactingfiles/">
+        Merging Small Files
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/concurrent/">
+        Concurrent Writes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/gcpsecretpolicy/">
+        GCP Service Account Permissions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/queryinjobprogress/">
+        Query Dataset for Job in Progress
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/incremental/">
+        Incremental Data Workload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../flare/readingstreamdata/">
+        Reading Stream Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Governance
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Governance" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Governance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datagovernance/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dataprofile/">
+        Data Profiling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fingerprinting/">
+        Data Fingerprinting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../assertions/">
+        Assertions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../policies/">
+        Policies
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Integrations" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/tableau/">
+        Tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/powerbi/">
+        PowerBI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../integrations/spss/">
+        IBM SPSS Statistics
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" id="nav-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-7">
+        Minerva
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Minerva" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-7">
+<span class="md-nav__icon md-icon"></span>
+          Minerva
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/introduction/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/tuneminerva/">
+        Minerva Cluster Tuning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../minerva/ondemandcompute/">
+        On Demand Computing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" id="nav-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-8">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tutorials" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-8">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/skewandkurtosis/">
+        Skew and Kurtosis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/nestedfieldsinspark3/">
+        Handle nested fields in Spark3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/rfmanalysis/">
+        RFM Analysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-metrics-and-checks-on-dataos-ui">
+    Getting metrics and checks on DataOS UI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-quality-metrics">
+    Creating quality metrics
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-quality-checks">
+    Setting up quality checks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-yaml">
+    Defining YAML
+  </a>
+<nav aria-label="Defining YAML" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-quality-checks-job">
+    Running quality checks job
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-metrics-functions">
+    Quality metrics functions
+  </a>
+<nav aria-label="Quality metrics functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#distinct_count">
+    distinct_count
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql">
+    sql
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#min">
+    min
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#max">
+    max
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avg_length">
+    avg_length
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#max_length">
+    max_length
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#min_length">
+    min_length
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sum">
+    sum
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missing_count">
+    missing_count
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missing_percentage">
+    missing_percentage
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-checks-operators">
+    Quality checks operators
+  </a>
+<nav aria-label="Quality checks operators" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#greater_than">
+    greater_than
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#less_than">
+    less_than
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom_sql">
+    custom_sql
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="metrics-and-checks">Metrics and Checks<a class="headerlink" href="#metrics-and-checks" title="Permanent link">¶</a></h1>
+<p>DataOS allows you to define your own metrics to identify aspects of data that can be measured, such as average order amount, average age of buyers. These metrics are used in combination with checks through which you can validate data quality. </p>
+<p>Once metrics are defined using simple SQL or specifying column names, you can set checks to configure business-specific rules. These rules can be used to analyze and evaluate the quality of specific data sets if they are appropriate for the intended purpose.</p>
+<h2 id="getting-metrics-and-checks-on-dataos-ui">Getting metrics and checks on DataOS UI<a class="headerlink" href="#getting-metrics-and-checks-on-dataos-ui" title="Permanent link">¶</a></h2>
+<p>You can view the list of metrics and checks created for the dataset to monitor the data quality and trends charts for each run. The trend charts also show whether the checks are passed or failed. </p>
+<ol>
+<li>Sign in to your DataOS instance with your username and password. </li>
+<li>On the <strong>DataOS Datanet</strong> page, search for the dataset for which you want to view the profile data. To display the dataset information, click on its name.
+<img alt="Image" src="../images/dataprofile-datanet-search1.png"/></li>
+<li>On the <strong>Dataset information</strong> page, click on <strong>Quality</strong>. 
+<img alt="Image" src="../images/dataprofile-metrics-checks.png"/></li>
+</ol>
+<h2 id="creating-quality-metrics">Creating quality metrics<a class="headerlink" href="#creating-quality-metrics" title="Permanent link">¶</a></h2>
+<p>Provide the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>name of the metrics</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#">data quality metrics function</a>, for example sqltype, regex</td>
+</tr>
+<tr>
+<td>column</td>
+<td>column on which metrics is to be defined</td>
+</tr>
+<tr>
+<td>sql</td>
+<td>sql statement if type is sql</td>
+</tr>
+<tr>
+<td>regex</td>
+<td>regular expression if type is regex</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setting-up-quality-checks">Setting up quality checks<a class="headerlink" href="#setting-up-quality-checks" title="Permanent link">¶</a></h2>
+<p>Provide the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>name to refer the check</td>
+</tr>
+<tr>
+<td>operator</td>
+<td><a href="#">data quality checks operator</a>, for example less than, greater_than</td>
+</tr>
+<tr>
+<td>metric name</td>
+<td>metric on which checks to be defined</td>
+</tr>
+<tr>
+<td>threshold</td>
+<td>a value to check the criterion</td>
+</tr>
+<tr>
+<td>sql</td>
+<td>sql statement if operator is custom sql</td>
+</tr>
+</tbody>
+</table>
+<h2 id="defining-yaml">Defining YAML<a class="headerlink" href="#defining-yaml" title="Permanent link">¶</a></h2>
+<p>The following is the sample YAML file to Set up data quality metrics and checks.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1beta1</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mtrx-chks-odr-enr-01</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workflow</span>
+<span class="nt">tags</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Metrics</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Checks</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job performs metrics calculations and checks on order enriched data</span>
+<span class="nt">workflow</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metrics and checks</span>
+  <span class="nt">dag</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">metrics-chks-order-enrich</span>
+      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metrics and checks</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job performs metrics calculations and checks on order enriched data</span>
+      <span class="nt">spec</span><span class="p">:</span>
+        <span class="nt">stack</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flare:1.0</span>
+        <span class="nt">tags</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Metrics</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metrics and checks</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The job performs metrics calculations and checks on order enriched data</span>
+        <span class="nt">flare</span><span class="p">:</span>
+          <span class="nt">job</span><span class="p">:</span>
+            <span class="nt">explain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+            <span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INFO</span>
+                                                                      <span class="l l-Scalar l-Scalar-Plain"># Single dataset in the input section</span>
+            <span class="nt">inputs</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">input_df</span>
+                <span class="nt">dataset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataos://icebase:set01/orders_enriched_01?acl=r</span>
+            <span class="nt">metrics</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">column_avg</span>
+                <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">order_amount</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">distinct_order_amount_count</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">column_distinct_count</span>
+                <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">order_amount</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount_custom</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom_sql</span>
+                <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select avg(order_amount) from input_df</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">col_mth_ratio</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">column_regex_match</span>
+                <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">brand_name</span>
+                <span class="nt">regex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Awkward Styles</span>
+            <span class="nt">checks</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount_gt_1000</span>
+                <span class="nt">metricName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount</span>
+                <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">greater_than</span>
+                <span class="nt">threshold</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000.00</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount_lt_1000</span>
+                <span class="nt">metricName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount</span>
+                <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">less_than</span>
+                <span class="nt">threshold</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000.00</span>
+              <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_order_amount_lt_sum_order_amount</span>
+                <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom_sql</span>
+                <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select avg(order_amount) &lt; sum(order_amount) from input_df</span>
+</code></pre></div>
+<h3 id="running-quality-checks-job">Running quality checks job<a class="headerlink" href="#running-quality-checks-job" title="Permanent link">¶</a></h3>
+<p>You can run the job defined with the quality checks on-demand or schedule it for recurring runs if the data is changing or incremental. Follow the steps to <a href="../../cli/tutorials/">submit the workflow to run Flare job on DataOS CLI</a>.</p>
+<h2 id="quality-metrics-functions">Quality metrics functions<a class="headerlink" href="#quality-metrics-functions" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avg</td>
+<td>The AVG functions returns the average of a column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">price</span>
+</code></pre></div></p>
+<h3 id="distinct_count">distinct_count<a class="headerlink" href="#distinct_count" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distinct_count</td>
+<td>The DISTINCT_COUNT function returns the count of the distinct values of a column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">distinct_price_count</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">distinct_count</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">price</span>
+</code></pre></div></p>
+<h3 id="sql">sql<a class="headerlink" href="#sql" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sql</td>
+<td>The SQL function returns the output of sql query. SQL output must be an integer value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_price_custom</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sql</span>
+    <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select avg(price) from input_df</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>regex_match</td>
+<td>The REGEX_MATCH function calculates the ratio of matching regex on a column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">regex_on_col</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">regex_match</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">product_name</span>
+    <span class="nt">regex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Western Cowboy</span>
+</code></pre></div></p>
+<h3 id="min">min<a class="headerlink" href="#min" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>The MIN function returns the minimum value of a column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">min_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">min</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">price</span>
+</code></pre></div></p>
+<h3 id="max">max<a class="headerlink" href="#max" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max</td>
+<td>The MAX function returns the maximum value of a column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">max_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">max</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">price</span>
+</code></pre></div></p>
+<h3 id="avg_length">avg_length<a class="headerlink" href="#avg_length" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avg_length</td>
+<td>The AVG_LENGTH function returns the average length of column value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+ <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_len_product_name</span>
+   <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_length</span>
+   <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">product_name</span>
+</code></pre></div></p>
+<h3 id="max_length">max_length<a class="headerlink" href="#max_length" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max_length</td>
+<td>The MAX_LENGTH function returns the maximun length of column value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">max_len_product_name</span>
+     <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">max_length</span>
+     <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">product_name</span>
+</code></pre></div></p>
+<h3 id="min_length">min_length<a class="headerlink" href="#min_length" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min_length</td>
+<td>The MIN_LENGTH function returns the minimum length of column value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">min_len_product_name</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">min_length</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">product_name</span>
+</code></pre></div></p>
+<h3 id="sum">sum<a class="headerlink" href="#sum" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sum</td>
+<td>The SUM function returns the total sum of column value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">total_sale_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sum</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sale_price</span>
+</code></pre></div></p>
+<h3 id="missing_count">missing_count<a class="headerlink" href="#missing_count" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>missing_count</td>
+<td>The MISSING_COUNT function returns the count of missing values in column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">missing_sale_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">missing_count</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sale_price</span>
+</code></pre></div></p>
+<h3 id="missing_percentage">missing_percentage<a class="headerlink" href="#missing_percentage" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>missing_percentage</td>
+<td>The MISSING_PERCENTAGE function returns the rate of missing values in column.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">missing_rate_sale_price</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">missing_percentage</span>
+    <span class="nt">column</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sale_price</span>
+</code></pre></div></p>
+<h2 id="quality-checks-operators">Quality checks operators<a class="headerlink" href="#quality-checks-operators" title="Permanent link">¶</a></h2>
+<h3 id="greater_than">greater_than<a class="headerlink" href="#greater_than" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>greater_than</td>
+<td>The GREATER_THAN function compares the metric value is greater or not with given threshold.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">checks</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">check001</span>
+    <span class="nt">metricName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_price</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">greater_than</span>
+    <span class="nt">threshold</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000.00</span>
+</code></pre></div></p>
+<h3 id="less_than">less_than<a class="headerlink" href="#less_than" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>less_than</td>
+<td>The LESS_THAN function compares the metric value is less or not with given threshold.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">checks</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">check002</span>
+    <span class="nt">metricName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">avg_price</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">less_than</span>
+    <span class="nt">threshold</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000.00</span>
+</code></pre></div></p>
+<h3 id="custom_sql">custom_sql<a class="headerlink" href="#custom_sql" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>custom_sql</td>
+<td>The CUSTOM_SQL function returns the output of sql query.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Snippet</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">checks</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">check003</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom_sql</span>
+    <span class="nt">sql</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">select avg(sale_price) &lt; sum(sale_price) from input_df</span>
+</code></pre></div></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+              Copyright ⓒ 2021 - 2022 The Modern Data Company
+            </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
+<script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+</body>
+</html>
